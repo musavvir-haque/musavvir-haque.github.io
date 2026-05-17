@@ -213,7 +213,7 @@
     overflow: hidden;
     position: relative;
     background: var(--bg2);
-    cursor: pointer;
+    cursor: default;
     transition: transform 0.3s, box-shadow 0.3s;
   }
   .photo-frame:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(124,58,237,0.25); }
@@ -229,24 +229,7 @@
     width: 100%; height: 100%;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    gap: 1rem; color: var(--muted);
-    font-size: 0.85rem; text-align: center; padding: 2rem;
-  }
-  .photo-placeholder svg { opacity: 0.4; }
-
-  .photo-overlay {
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.2s;
-    border-radius: inherit;
-  }
-  .photo-frame:hover .photo-overlay { opacity: 1; }
-
-  .photo-overlay span {
-    background: var(--accent); color: #fff;
-    padding: 0.5rem 1.2rem; border-radius: 6px;
-    font-size: 0.82rem; font-weight: 600;
+    background: var(--bg2);
   }
 
   /* decorative corner lines */
@@ -528,9 +511,6 @@
   @media (max-width: 600px) {
     section { padding: 60px 5%; }
   }
-
-  /* hidden input */
-  #photo-input { display: none; }
 </style>
 </head>
 <body>
@@ -595,19 +575,13 @@
       </div>
     </div>
 
-    <!-- PHOTO -->
+    <!-- PHOTO — no upload, just displays if src loads, blank if not -->
     <div class="hero-photo">
-      <input type="file" id="photo-input" accept="image/*" onchange="handlePhoto(event)">
-      <div class="photo-frame" onclick="document.getElementById('photo-input').click()" title="Click to upload your photo">
-        <div class="photo-placeholder" id="photo-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-          </svg>
-          <p>Click to upload<br>your photo</p>
-          <span style="font-size:0.72rem;color:var(--accent3)">Recommended: portrait, 3:4 ratio</span>
-        </div>
-        <img id="hero-img" src="" alt="Musavvir Haque" style="display:none">
-        <div class="photo-overlay"><span>Change Photo</span></div>
+      <div class="photo-frame">
+        <img id="hero-img"
+             src="https://musavvir-haque.github.io/photo.jpg"
+             alt="Musavvir Haque"
+             onerror="this.style.display='none'">
       </div>
     </div>
   </div>
@@ -1057,35 +1031,6 @@
   function toggleMenu() {
     document.getElementById('mobileNav').classList.toggle('open');
   }
-
-  /* ── PHOTO UPLOAD ── */
-  function handlePhoto(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = document.getElementById('hero-img');
-      const placeholder = document.getElementById('photo-placeholder');
-      img.src = e.target.result;
-      img.style.display = 'block';
-      placeholder.style.display = 'none';
-      // persist in localStorage for session
-      try { localStorage.setItem('mh_photo', e.target.result); } catch(err) {}
-    };
-    reader.readAsDataURL(file);
-  }
-
-  // restore on load
-  try {
-    const saved = localStorage.getItem('mh_photo');
-    if (saved) {
-      const img = document.getElementById('hero-img');
-      const placeholder = document.getElementById('photo-placeholder');
-      img.src = saved;
-      img.style.display = 'block';
-      placeholder.style.display = 'none';
-    }
-  } catch(err) {}
 
   /* ── SCROLL REVEAL ── */
   const revealEls = document.querySelectorAll('.reveal');
