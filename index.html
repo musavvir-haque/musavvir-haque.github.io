@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musavvir Haque | EEE Researcher & IEEE Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b12;
+    --bg2: #0d1120;
+    --bg3: #111827;
+    --accent: #7c3aed;
+    --accent2: #a855f7;
+    --accent3: #c084fc;
+    --text: #e2e8f0;
+    --muted: #8892a4;
+    --border: rgba(124,58,237,0.25);
+    --card: rgba(17,24,39,0.8);
+    --glow: rgba(124,58,237,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: 0.4;
+  }
+
+  /* ── SCROLL BAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(8,11,18,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 62px;
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .nav-logo span { color: var(--accent2); }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent3); }
+
+  .nav-cta {
+    background: var(--accent); color: #fff !important;
+    padding: 0.45rem 1.1rem; border-radius: 6px;
+    font-size: 0.82rem !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--accent2) !important; transform: translateY(-1px); }
+
+  /* hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+  .mobile-nav { display: none; flex-direction: column; position: fixed; top: 62px; left: 0; width: 100%; background: rgba(8,11,18,0.97); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1rem; z-index: 99; }
+  .mobile-nav a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
+  .mobile-nav.open { display: flex; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 100px 8% 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* big glowing orbs */
+  #hero::before, #hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+  #hero::before {
+    width: 500px; height: 500px;
+    background: rgba(124,58,237,0.18);
+    top: -100px; left: -100px;
+  }
+  #hero::after {
+    width: 400px; height: 400px;
+    background: rgba(168,85,247,0.12);
+    bottom: 0; right: 0;
+  }
+
+  .hero-inner {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 4rem;
+    width: 100%; max-width: 1200px; margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+
+  .hero-text { flex: 1; max-width: 600px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.78rem; color: var(--accent3);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .badge-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800; line-height: 1.05;
+    letter-spacing: -1.5px;
+    color: #fff;
+    margin-bottom: 0.4rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero-title-accent {
+    color: var(--accent2);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 1rem; color: var(--muted);
+    margin-bottom: 1.6rem; max-width: 480px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .tag {
+    background: rgba(124,58,237,0.12);
+    border: 1px solid var(--border);
+    color: var(--accent3);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px; font-size: 0.75rem;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    padding: 0.75rem 1.8rem; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 24px rgba(124,58,237,0.4);
+  }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 0 36px rgba(168,85,247,0.5); }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border); color: var(--text);
+    padding: 0.75rem 1.8rem; border-radius: 8px;
+    text-decoration: none; font-weight: 500; font-size: 0.9rem;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--accent2); color: var(--accent3); transform: translateY(-2px); }
+
+  /* photo card */
+  .hero-photo {
+    flex-shrink: 0;
+    position: relative;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .photo-frame {
+    width: 300px; height: 360px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+    position: relative;
+    background: var(--bg2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .photo-frame:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(124,58,237,0.25); }
+
+  .photo-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.4s;
+  }
+  .photo-frame:hover img { transform: scale(1.03); }
+
+  .photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem; color: var(--muted);
+    font-size: 0.85rem; text-align: center; padding: 2rem;
+  }
+  .photo-placeholder svg { opacity: 0.4; }
+
+  .photo-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.2s;
+    border-radius: inherit;
+  }
+  .photo-frame:hover .photo-overlay { opacity: 1; }
+
+  .photo-overlay span {
+    background: var(--accent); color: #fff;
+    padding: 0.5rem 1.2rem; border-radius: 6px;
+    font-size: 0.82rem; font-weight: 600;
+  }
+
+  /* decorative corner lines */
+  .photo-frame::before, .photo-frame::after {
+    content: '';
+    position: absolute;
+    width: 28px; height: 28px;
+    border-color: var(--accent2);
+    border-style: solid;
+    z-index: 3;
+  }
+  .photo-frame::before { top: -2px; left: -2px; border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
+  .photo-frame::after  { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+
+  .hero-stat-row {
+    display: flex; gap: 1.5rem;
+    margin-top: 2rem;
+    animation: fadeUp 0.6s 0.5s ease both;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--accent2); line-height: 1; }
+  .hero-stat .lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* ── SECTIONS ── */
+  section { padding: 90px 8%; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.72rem; color: var(--accent3);
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; margin-bottom: 0.6rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(124,58,237,0.1);
+    border: 1px solid var(--border); border-radius: 4px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800; letter-spacing: -0.5px;
+    color: #fff; margin-bottom: 0.5rem;
+  }
+
+  .section-title span { color: var(--accent2); }
+
+  .section-line {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    border-radius: 2px; margin-bottom: 3rem;
+    margin-top: 0.6rem;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg2); }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+
+  .about-text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+
+  .about-info { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+  .info-row { display: flex; gap: 1rem; align-items: flex-start; font-size: 0.88rem; }
+  .info-label { color: var(--accent3); font-weight: 600; min-width: 90px; }
+  .info-value { color: var(--text); }
+
+  .about-cards { display: flex; flex-direction: column; gap: 1rem; }
+  .about-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.2rem 1.4rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .about-card:hover { border-color: var(--accent2); transform: translateX(4px); }
+  .about-card-icon {
+    width: 38px; height: 38px; border-radius: 8px;
+    background: rgba(124,58,237,0.2); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .about-card h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
+  .about-card p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+
+  /* ── RESEARCH / PUBLICATIONS ── */
+  #research { background: var(--bg); }
+
+  .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+  .pub-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.4rem 1.6rem;
+    position: relative; overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .pub-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: linear-gradient(180deg, var(--accent), var(--accent2));
+    border-radius: 3px 0 0 3px;
+  }
+  .pub-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+
+  .pub-type {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent3); font-weight: 700;
+    background: rgba(124,58,237,0.1); border-radius: 3px;
+    padding: 0.15rem 0.5rem; display: inline-block; margin-bottom: 0.5rem;
+  }
+  .pub-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.4; }
+  .pub-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .pub-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+  .pub-link { color: var(--accent3); font-size: 0.8rem; text-decoration: none; margin-top: 0.5rem; display: inline-block; transition: color 0.2s; }
+  .pub-link:hover { color: #fff; }
+  .pub-keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
+  .kw { background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.2); color: var(--accent3); font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 3px; }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--bg2); }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
+
+  .skill-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.3rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .skill-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
+  .skill-card-header { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
+  .skill-icon { font-size: 1.3rem; }
+  .skill-card h4 { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; color: #fff; }
+
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .pill {
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(124,58,237,0.2);
+    color: var(--text); font-size: 0.75rem;
+    padding: 0.25rem 0.65rem; border-radius: 100px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .pill:hover { background: rgba(124,58,237,0.25); border-color: var(--accent2); color: var(--accent3); }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg); }
+
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+
+  .project-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.4rem;
+    transition: border-color 0.25s, transform 0.25s;
+    display: flex; flex-direction: column;
+  }
+  .project-card:hover { border-color: var(--accent2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,0.12); }
+  .project-date { font-size: 0.72rem; color: var(--accent3); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .project-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.7rem; line-height: 1.35; }
+  .project-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; flex: 1; }
+
+  /* ── AWARDS ── */
+  #awards { background: var(--bg2); }
+
+  .awards-list { display: flex; flex-direction: column; gap: 1rem; }
+  .award-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.2rem 1.4rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .award-card:hover { border-color: #f59e0b; transform: translateX(4px); }
+  .award-medal { font-size: 1.6rem; flex-shrink: 0; }
+  .award-card h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+  .award-card p { font-size: 0.8rem; color: var(--muted); }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--bg); }
+
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 6px; bottom: 0;
+    width: 1px; background: linear-gradient(180deg, var(--accent), transparent);
+  }
+
+  .timeline-item { position: relative; margin-bottom: 2rem; }
+  .timeline-item::before {
+    content: '';
+    position: absolute; left: -2.45rem; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent2); border: 2px solid var(--bg);
+    box-shadow: 0 0 10px var(--accent);
+  }
+  .timeline-date { font-size: 0.75rem; color: var(--accent3); font-weight: 600; margin-bottom: 0.3rem; }
+  .timeline-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.15rem; }
+  .timeline-org { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .timeline-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: var(--bg2); }
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.8rem; }
+  .cert-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.2rem;
+    transition: border-color 0.2s;
+    font-size: 0.82rem;
+  }
+  .cert-card:hover { border-color: var(--accent2); }
+  .cert-card strong { display: block; color: #fff; font-size: 0.85rem; margin-bottom: 0.2rem; }
+  .cert-card span { color: var(--muted); font-size: 0.78rem; }
+  .cert-link { color: var(--accent3); font-size: 0.75rem; text-decoration: none; }
+  .cert-link:hover { color: #fff; }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--bg);
+    text-align: center;
+  }
+  .contact-inner { max-width: 600px; margin: 0 auto; }
+  .contact-inner p { color: var(--muted); margin-bottom: 2rem; }
+
+  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .contact-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--card); border: 1px solid var(--border);
+    color: var(--text); padding: 0.7rem 1.3rem;
+    border-radius: 8px; text-decoration: none;
+    font-size: 0.85rem; font-weight: 500;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+  .contact-btn:hover { border-color: var(--accent2); color: var(--accent3); transform: translateY(-2px); }
+  .contact-btn.primary-btn { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 24px rgba(124,58,237,0.3); }
+  .contact-btn.primary-btn:hover { background: var(--accent2); }
+
+  .refs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; text-align: left; }
+  .ref-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem;
+  }
+  .ref-card h4 { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff; }
+  .ref-card p { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
+  .ref-card a { color: var(--accent3); font-size: 0.75rem; text-decoration: none; margin-top: 0.3rem; display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent3); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { flex-direction: column-reverse; text-align: center; }
+    .hero-tags { justify-content: center; }
+    .hero-actions { justify-content: center; }
+    .hero-stat-row { justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .refs-grid { grid-template-columns: 1fr; }
+    nav .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .photo-frame { width: 220px; height: 280px; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 60px 5%; }
+  }
+
+  /* hidden input */
+  #photo-input { display: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MH<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#research" onclick="toggleMenu()">Research</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#awards" onclick="toggleMenu()">Awards</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Research Collaboration &amp; PhD Opportunities
+      </div>
+      <h1 class="hero-title">
+        Musavvir<br>
+        <span class="hero-title-accent">Haque</span>
+      </h1>
+      <p class="hero-sub">EEE Researcher · IEEE SPS Chapter Chair · Computational Materials Scientist &amp; ML Engineer | Jashore University of Science &amp; Technology</p>
+      <div class="hero-tags">
+        <span class="tag">Fusion Materials</span>
+        <span class="tag">Molecular Dynamics</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Signal Processing</span>
+        <span class="tag">DFT/MD Simulation</span>
+        <span class="tag">IEEE Leader</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#research" class="btn-primary">View Research</a>
+        <a href="mailto:musavvirhaquepial@gmail.com" class="btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="num">4+</div><div class="lbl">Publications</div></div>
+        <div class="hero-stat"><div class="num">3</div><div class="lbl">Awards</div></div>
+        <div class="hero-stat"><div class="num">3.47</div><div class="lbl">CGPA</div></div>
+        <div class="hero-stat"><div class="num">2</div><div class="lbl">Under Review</div></div>
+      </div>
+    </div>
+
+    <!-- PHOTO -->
+    <div class="hero-photo">
+      <input type="file" id="photo-input" accept="image/*" onchange="handlePhoto(event)">
+      <div class="photo-frame" onclick="document.getElementById('photo-input').click()" title="Click to upload your photo">
+        <div class="photo-placeholder" id="photo-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+          <p>Click to upload<br>your photo</p>
+          <span style="font-size:0.72rem;color:var(--accent3)">Recommended: portrait, 3:4 ratio</span>
+        </div>
+        <img id="hero-img" src="" alt="Musavvir Haque" style="display:none">
+        <div class="photo-overlay"><span>Change Photo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <span class="section-tag">Introduction</span>
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="section-line"></div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>I am an aspiring PhD researcher and final-year B.Sc. student in Electrical and Electronic Engineering at Jashore University of Science and Technology (JUST), Bangladesh. My research bridges computational materials science, machine learning, and signal processing.</p>
+        <p>My primary focus is on plasma–material interactions in fusion-relevant tungsten, ML-accelerated materials modelling (DFT/MD surrogates), ion implantation physics in semiconductor substrates, and real-time wearable biosignal processing using advanced signal decomposition.</p>
+        <p>Beyond research, I serve as Chair of the IEEE Signal Processing Society JUST Student Branch Chapter, where I organise technical events, mentorship programmes, and workshops fostering undergraduate research culture.</p>
+        <div class="about-info">
+          <div class="info-row"><span class="info-label">Location</span><span class="info-value">Jessore, Khulna, Bangladesh</span></div>
+          <div class="info-row"><span class="info-label">Degree</span><span class="info-value">B.Sc. EEE, JUST (2022–2026)</span></div>
+          <div class="info-row"><span class="info-label">CGPA</span><span class="info-value">3.47 / 4.00</span></div>
+          <div class="info-row"><span class="info-label">IEEE Role</span><span class="info-value">Chair, IEEE SPS JUST SBC 2025</span></div>
+          <div class="info-row"><span class="info-label">English</span><span class="info-value">C2 Proficient — EF SET 82/100</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span class="info-value"><a href="mailto:musavvirhaquepial@gmail.com" style="color:var(--accent3);text-decoration:none">musavvirhaquepial@gmail.com</a></span></div>
+        </div>
+      </div>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon">⚛️</div>
+          <div>
+            <h4>Computational Materials Science</h4>
+            <p>Large-scale MD simulation using LAMMPS; fusion-relevant plasma–material interactions in BCC tungsten across energy and temperature space.</p>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🤖</div>
+          <div>
+            <h4>Machine Learning for Physics</h4>
+            <p>XGBoost & Random Forest ML surrogates for DFT/MD predictions; ion implantation modelling in semiconductor substrates.</p>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">📡</div>
+          <div>
+            <h4>Signal Processing & Wearables</h4>
+            <p>Adaptive VMD with transfer entropy for real-time ECG arrhythmia detection; embedded AI for next-gen wearable devices.</p>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🏛️</div>
+          <div>
+            <h4>IEEE Technical Leadership</h4>
+            <p>Chair, IEEE SPS JUST SBC 2025; organiser of SigMa Mentorship 2026; ex-Vice Chair, IEEE JUST SB (2024–2025).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <span class="section-tag">Academia</span>
+    <h2 class="section-title">Research &amp; <span>Publications</span></h2>
+    <div class="section-line"></div>
+    <div class="pub-list">
+
+      <div class="pub-card reveal">
+        <span class="pub-type">📄 Journal — Under Review</span>
+        <div class="pub-title">[J1] Hydrogen Implantation and Diffusion in BCC Tungsten: A Systematic Molecular Dynamics Study over 5–300 eV and 300–1500 K</div>
+        <div class="pub-meta">Submitted to peer-reviewed journal · Supervisor: Md. Amzad Hossain · Authors: <strong>Musavvir Haque</strong>, Md. Amzad Hossain</div>
+        <div class="pub-desc">Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten. Uses the Bonny EAM/alloy W–H–He potential in LAMMPS. Identifies non-monotonic retention behaviour, implantation depth saturation, Arrhenius diffusion, and cascade-dominated high-energy regimes relevant to ITER and DEMO.</div>
+        <div class="pub-keywords">
+          <span class="kw">Molecular Dynamics</span><span class="kw">Hydrogen Implantation</span>
+          <span class="kw">Tungsten PFM</span><span class="kw">Radiation Damage</span>
+          <span class="kw">Fusion Materials</span><span class="kw">LAMMPS</span>
+        </div>
+      </div>
+
+      <div class="pub-card reveal">
+        <span class="pub-type">📘 B.Sc. Thesis</span>
+        <div class="pub-title">[T1] Multi-Scale DFT–MD–ML Modelling on Hydrogen Isotope Retention and Oxide Dynamics in Tungsten with Plasma Exposure for Fusion Reactor</div>
+        <div class="pub-meta">B.Sc. Submitted Thesis, JUST · Supervisor: Md. Tariquzzaman, Assistant Professor</div>
+        <div class="pub-desc">Multiscale framework integrating DFT/MD-derived physical trends with machine learning for hydrogen isotope retention and oxide-layer evolution in plasma-exposed tungsten. XGBoost regressor: MAE = 0.017 eV, R² = 0.88 for binding energy; MAE = 0.91%, R² = 0.87 for crack density. Validated against TDS experiments and WEST tokamak observations.</div>
+        <div class="pub-keywords">
+          <span class="kw">DFT</span><span class="kw">MD Simulation</span><span class="kw">XGBoost</span>
+          <span class="kw">Hydrogen Isotope</span><span class="kw">Tungsten</span><span class="kw">Fusion Reactor</span>
+        </div>
+      </div>
+
+      <div class="pub-card reveal">
+        <span class="pub-type">🎤 Conference Paper</span>
+        <div class="pub-title">[C1] Adaptive Multi-Scale VMD with Transfer Entropy for Real-Time Detection of Arrhythmia Transitions in Wearable ECG Devices</div>
+        <div class="pub-meta">5th Int. Conf. Electrical, Computer &amp; Telecommunication Engineering (ICECTE), Rajshahi, 2026 · pp. 1–6</div>
+        <a href="https://doi.org/10.1109/ICECTE69292.2026.11429390" class="pub-link" target="_blank">doi:10.1109/ICECTE69292.2026.11429390 ↗</a>
+      </div>
+
+      <div class="pub-card reveal">
+        <span class="pub-type">🎤 Conference Paper</span>
+        <div class="pub-title">[C2] Secure Academic Assessment Using IoT Based Dual Mode Biometric Attendance System for University</div>
+        <div class="pub-meta">2025 Int. Conf. on Quantum Photonics, AI, and Networking (QPAIN), Rangpur, Jul. 2025</div>
+        <a href="https://doi.org/10.1109/QPAIN66474.2025.11171806" class="pub-link" target="_blank">doi:10.1109/QPAIN66474.2025.11171806 ↗</a>
+      </div>
+
+      <div class="pub-card reveal">
+        <span class="pub-type">🎤 Conference Paper — Oral</span>
+        <div class="pub-title">[C3] A DFT Study on Penta-Boron Phosphorus (P-BP₅) Nanosheet for Oxygen-Based Toxic Gases Sensing</div>
+        <div class="pub-meta">2nd Int. Conf. on Engineering and Technology for Sustainable Development (ETSD 2026), Jashore, May 2026 · Paper ID: 136 · Oral Presentation</div>
+        <div class="pub-desc">Co-authors: N. M. Sathi, M. H. Rocky, N. R. Ritu, Md. S. Hossain, I. A. Mim, Md. M. Rahman, A. S. Fahim, Md. R. Khan, Md. A. Hossain</div>
+      </div>
+
+      <div class="pub-card reveal">
+        <span class="pub-type">🎤 Conference Paper — Accepted</span>
+        <div class="pub-title">[C4] A Validated ML Surrogate for Rapid Forward and Reverse Ion Implantation Modeling in GaAs Substrates for Plasma-Based Semiconductor Industry</div>
+        <div class="pub-meta">2026 IEEE Int. Conf. on Plasma Science (ICOPS), Jun. 2026 · Submission ID: 102</div>
+        <div class="pub-desc">Co-authors: A. S. Fahim, Md. A. Hossain, Md. R. Khan, M. H. Rocky</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <span class="section-tag">Expertise</span>
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+    <div class="section-line"></div>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">💻</span><h4>Computational &amp; Simulation</h4></div>
+        <div class="skill-pills">
+          <span class="pill">LAMMPS</span><span class="pill">PVsyst</span><span class="pill">Proteus</span>
+          <span class="pill">ModelSim</span><span class="pill">SOLIDWORKS</span><span class="pill">TIA Portal</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">🧠</span><h4>Machine Learning &amp; Data</h4></div>
+        <div class="skill-pills">
+          <span class="pill">XGBoost</span><span class="pill">Random Forest</span><span class="pill">Python</span>
+          <span class="pill">MATLAB</span><span class="pill">ML Pipelines</span><span class="pill">Scikit-learn</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">📡</span><h4>Signal Processing</h4></div>
+        <div class="skill-pills">
+          <span class="pill">VMD</span><span class="pill">Transfer Entropy</span><span class="pill">ECG Analysis</span>
+          <span class="pill">Wearable Biosensors</span><span class="pill">Real-Time DSP</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">🔌</span><h4>Hardware &amp; Embedded</h4></div>
+        <div class="skill-pills">
+          <span class="pill">IoT Systems</span><span class="pill">ESP32/8266</span><span class="pill">Arduino</span>
+          <span class="pill">PCB Design</span><span class="pill">PLC Programming</span><span class="pill">Sensor Interfacing</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">⚡</span><h4>VLSI &amp; IC Design</h4></div>
+        <div class="skill-pills">
+          <span class="pill">VLSI</span><span class="pill">ASIC</span><span class="pill">Analog Circuit Design</span>
+          <span class="pill">PNR</span><span class="pill">Cadence</span><span class="pill">ModelSim</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-header"><span class="skill-icon">🌱</span><h4>Power &amp; Energy</h4></div>
+        <div class="skill-pills">
+          <span class="pill">Energy Audits</span><span class="pill">Solar PV</span><span class="pill">PVsyst</span>
+          <span class="pill">Power Plants</span><span class="pill">Renewable Energy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <span class="section-tag">Work</span>
+    <h2 class="section-title">Selected <span>Projects</span></h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-date">Aug–Dec 2024</div>
+        <h3>Sustainable IoT-Based Biometric Attendance &amp; Course Management System</h3>
+        <p>ESP32 + Supabase cloud biometric attendance system with AES-256 encryption, role-based access control, offline sync, and mark computation based on JUST's 28-mark academic model.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">May 2025 – Present</div>
+        <h3>Energy Audit for Saleha Metal Industries Limited</h3>
+        <p>Comprehensive audit of 5.1M kWh annual consumption; 400 kVA transformer analysis, synchronisation of 430 kVA &amp; 670 kVA transformers, and renewable integration recommendations.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Apr 2025</div>
+        <h3>Walk-Through Energy Audit — Bangladesh Cable Shilpa Ltd.</h3>
+        <p>Analysed 34,792 kWh consumption; identified savings via LED lighting (50%), BLDC fans (53.8%), and a 1 MW solar plant to replace diesel generators.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Jun 2025</div>
+        <h3>Adaptive Cruise Control — Miniature Car</h3>
+        <p>Arduino-based PID control prototype for safe following distance using ultrasonic sensors, encoder speed sensing, and optional IR-sensor lane-keeping.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Jul 2025</div>
+        <h3>Dual-Mode Motor Control — Siemens PLC</h3>
+        <p>Siemens S7-1200 motor control via PC HMI and manual switch, programmed in TIA Portal with ladder logic.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Apr–May 2024</div>
+        <h3>Smart Home Automation — Blynk &amp; Google Assistant</h3>
+        <p>ESP8266 + relays for lights/fans controlled via Blynk app and Google Assistant voice commands with IFTTT integration.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Oct 2024</div>
+        <h3>Line Follower Robot (LFR)</h3>
+        <p>IR-sensor LFR with L298N motor driver; real-time path detection and motor control in Embedded C / Arduino IDE.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-date">Aug 2025</div>
+        <h3>Short Circuit Protection System</h3>
+        <p>Designed protection mechanism for switchgear: fault detection, protective relays, and circuit interrupters for power distribution safety.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="container">
+    <span class="section-tag">Recognition</span>
+    <h2 class="section-title">Honors &amp; <span>Awards</span></h2>
+    <div class="section-line"></div>
+    <div class="awards-list">
+      <div class="award-card reveal">
+        <div class="award-medal">🥇</div>
+        <div>
+          <h4>1st Place — Best Paper Presentation</h4>
+          <p>2nd Int. Conf. on Engineering and Technology for Sustainable Development (ETSD 2026), JUST, May 2026 — for "Integrated DFT–MD–ML Multiscale Modelling of Hydrogen Isotope Trapping and Oxide Evolution in Tungsten under Fusion-Relevant Plasma Exposure"</p>
+        </div>
+      </div>
+      <div class="award-card reveal">
+        <div class="award-medal">🥇</div>
+        <div>
+          <h4>1st Place — Best Poster Presentation</h4>
+          <p>Sustainable IoT-Based Biometric Attendance System Poster Presentation, Jashore University of Science and Technology, May 2025</p>
+        </div>
+      </div>
+      <div class="award-card reveal">
+        <div class="award-medal">🏅</div>
+        <div>
+          <h4>4th Runner-Up — IEEE Bangladesh Section SYW Idea Pitching 2025</h4>
+          <p>IEEE Bangladesh Section competitive idea pitching competition among student branches nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <span class="section-tag">Journey</span>
+    <h2 class="section-title">Experience &amp; <span>Leadership</span></h2>
+    <div class="section-line"></div>
+    <div class="timeline reveal">
+
+      <div class="timeline-item">
+        <div class="timeline-date">Sep 2025 – Present</div>
+        <div class="timeline-title">Chair, IEEE Signal Processing Society JUST SBC</div>
+        <div class="timeline-org">IEEE SPS JUST Student Branch Chapter, Jashore</div>
+        <div class="timeline-desc">Elected Chapter Chair; leading technical events, workshops, and mentorship in signal processing. Organising the SigMa Mentorship Programme 2026 for undergraduate researchers.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2024 – Sep 2025</div>
+        <div class="timeline-title">Vice Chair (Technical), IEEE JUST Student Branch</div>
+        <div class="timeline-org">IEEE JUST SB, Jashore</div>
+        <div class="timeline-desc">Organised workshops, seminars, and conferences; promoted technical skills and leadership across EEE, CS, and related disciplines.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">May 2025</div>
+        <div class="timeline-title">Internship Trainee — Analog IC Design</div>
+        <div class="timeline-org">Ulkasemi Ltd.</div>
+        <div class="timeline-desc">Training on Analog IC Design, Layout Techniques, and Verification Flows; exposure to industry chip design workflows using VLSI, Cadence toolchain, and ModelSim.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Jun 2025</div>
+        <div class="timeline-title">Guest Speaker — Physical Design (PNR)</div>
+        <div class="timeline-org">EEE Club JUST</div>
+        <div class="timeline-desc">Delivered seminar on Placement &amp; Routing after industrial training at Ulkasemi Ltd.; covered PNR basics, EDA tools, and semiconductor career pathways.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2025</div>
+        <div class="timeline-title">Speaker — Embedded AI / Speech &amp; Audio Processing</div>
+        <div class="timeline-org">IEEE SPS DeKUT Student Branch Chapter (Webinar)</div>
+        <div class="timeline-desc">Delivered webinar on embedded AI, speech, and audio processing for next-generation wearable devices. Organised by IEEE SPS DeKUT SBC in collaboration with IEEE CAS &amp; IEEE DeKUT SB.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2026</div>
+        <div class="timeline-title">Solar Training: PV Technology &amp; System Design</div>
+        <div class="timeline-org">Daffodil International University (1 Month)</div>
+        <div class="timeline-desc">Renewable energy, emissions control, solar PV technology in Bangladesh; PVsyst simulation, economic analysis, O&amp;M. Credential ID: RE26312.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Jun–Jul 2025</div>
+        <div class="timeline-title">Professional Training — Electrical Engineering &amp; Instrumentation</div>
+        <div class="timeline-org">TICI</div>
+        <div class="timeline-desc">Hands-on: industrial sensors, PLC-based automation, and electrical safety standards.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2023 – Jan 2024</div>
+        <div class="timeline-title">Webmaster, IEEE JUST Student Branch</div>
+        <div class="timeline-org">IEEE JUST SB</div>
+        <div class="timeline-desc">Designed and maintained the IEEE JUST SB official website.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <span class="section-tag">Credentials</span>
+    <h2 class="section-title">Certifications &amp; <span>Memberships</span></h2>
+    <div class="section-line"></div>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <strong>EF SET English — C2 Proficient</strong>
+        <span>Score: 82/100 · Feb 2026</span><br>
+        <a href="https://cert.efset.org/C2S2MJ" class="cert-link" target="_blank">cert.efset.org/C2S2MJ ↗</a>
+      </div>
+      <div class="cert-card">
+        <strong>Machine Learning With Python</strong>
+        <span>Bangladesh Computer Council (EDGE Project), JUST · Sep 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>IEEE Signal Processing Society</strong>
+        <span>IEEE Member · 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>IEEE Power and Energy Society</strong>
+        <span>IEEE Member · 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>Industrial Training — Electrical &amp; Instrumentation</strong>
+        <span>TICI · Jul 2025 · PLC Programming</span>
+      </div>
+      <div class="cert-card">
+        <strong>PCB Design Training</strong>
+        <span>Conducted by Walton Engineer, JUST · May 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>IEEE QPAIN 2025 Research Presentation</strong>
+        <span>IEEE Photonics Society Bangladesh Chapter · Aug 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>SOLIDWORKS Associate (CSWA) Course</strong>
+        <span>Udemy · Jul 2023</span>
+      </div>
+      <div class="cert-card">
+        <strong>Introduction to IoT</strong>
+        <span>Cisco · Jul 2023</span>
+      </div>
+      <div class="cert-card">
+        <strong>Certificate of Appreciation — Arduino &amp; LFR Workshop</strong>
+        <span>EEE Club JUST · Aug 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>Speaker — LinkedIn &amp; CV Writing Webinar</strong>
+        <span>IEEE SPS JUST SBC &amp; IEEE JUST SB · Oct 2025</span>
+      </div>
+      <div class="cert-card">
+        <strong>Speaker — SigMa Mentorship Program 2026</strong>
+        <span>IEEE SPS JUST SBC · Oct 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="section-line" style="margin: 0.6rem auto 2rem"></div>
+      <p>Open to PhD opportunities, research collaborations, and academic discussions in computational materials science, ML for physics, and signal processing.</p>
+      <div class="contact-links">
+        <a href="mailto:musavvirhaquepial@gmail.com" class="contact-btn primary-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/musavvir-haque-897463253/" class="contact-btn" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#research" class="contact-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          View Publications
+        </a>
+      </div>
+
+      <div class="refs-grid">
+        <div class="ref-card">
+          <h4>Md. Amzad Hossain</h4>
+          <p>Associate Professor<br>Dept. of EEE, JUST</p>
+          <a href="mailto:ma.hossain@just.edu.bd">ma.hossain@just.edu.bd</a>
+        </div>
+        <div class="ref-card">
+          <h4>Prof. Dr. Imran Khan</h4>
+          <p>Dean (In-Charge) &amp; Professor<br>Dept. of EEE, JUST</p>
+          <a href="mailto:i.khan@just.edu.bd">i.khan@just.edu.bd</a>
+        </div>
+        <div class="ref-card">
+          <h4>Md. Tariquzzaman</h4>
+          <p>Assistant Professor<br>Dept. of EEE, JUST</p>
+          <a href="mailto:tariquzzaman@just.edu.bd">tariquzzaman@just.edu.bd</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> · Jessore, Bangladesh · 2025</p>
+  <p style="margin-top:0.4rem">EEE Researcher · IEEE SPS Chapter Chair · <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
+</footer>
+
+<script>
+  /* ── MOBILE NAV ── */
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  /* ── PHOTO UPLOAD ── */
+  function handlePhoto(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = document.getElementById('hero-img');
+      const placeholder = document.getElementById('photo-placeholder');
+      img.src = e.target.result;
+      img.style.display = 'block';
+      placeholder.style.display = 'none';
+      // persist in localStorage for session
+      try { localStorage.setItem('mh_photo', e.target.result); } catch(err) {}
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // restore on load
+  try {
+    const saved = localStorage.getItem('mh_photo');
+    if (saved) {
+      const img = document.getElementById('hero-img');
+      const placeholder = document.getElementById('photo-placeholder');
+      img.src = saved;
+      img.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+  } catch(err) {}
+
+  /* ── SCROLL REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i * 0.06) + 's';
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => io.observe(el));
+
+  /* ── ACTIVE NAV ── */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent3)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
