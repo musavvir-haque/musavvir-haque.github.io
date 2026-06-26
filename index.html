@@ -1,517 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- ═══════════════════════════════════════════════
+     META & SEO
+═══════════════════════════════════════════════ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Musavvir Haque">
+<meta name="description" content="Musavvir Haque — EEE graduate, computational materials scientist, and ML engineer at JUST, Bangladesh. Researcher in fusion plasma–material interactions, MD/DFT simulation, and signal processing. PhD applicant.">
+<meta name="keywords" content="Musavvir Haque, EEE, Electrical Electronic Engineering, Researcher, Machine Learning, Fusion Materials, Molecular Dynamics, LAMMPS, DFT, Signal Processing, IEEE, Bangladesh, JUST, Jashore University, PhD applicant, Computational Materials Science, Ion Implantation, Tungsten, Plasma Material Interaction">
+<link rel="canonical" href="https://musavvir-haque.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://musavvir-haque.github.io/">
+<meta property="og:title" content="Musavvir Haque | EEE Researcher & IEEE Leader">
+<meta property="og:description" content="Computational materials scientist and ML engineer specialising in fusion plasma–material interactions, MD/DFT simulation, and signal processing.">
+<meta property="og:image" content="https://musavvir-haque.github.io/photo.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Musavvir Haque Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Musavvir Haque | EEE Researcher & IEEE Leader">
+<meta name="twitter:description" content="Fusion materials, ML, and signal processing researcher. B.Sc. EEE, JUST. PhD applicant.">
+<meta name="twitter:image" content="https://musavvir-haque.github.io/photo.jpg">
+
+<!-- Favicon placeholder -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236366f1'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='18' fill='white'>M</text></svg>">
+
 <title>Musavvir Haque | EEE Researcher & IEEE Leader</title>
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Sitemap / Robots references -->
+<!-- <link rel="sitemap" href="/sitemap.xml"> -->
+
+<!-- ═══════════════════════════════════════════════
+     STRUCTURED DATA (JSON-LD)
+═══════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://musavvir-haque.github.io/#person",
+      "name": "Musavvir Haque",
+      "givenName": "Musavvir",
+      "familyName": "Haque",
+      "jobTitle": "EEE Researcher & IEEE Leader",
+      "description": "B.Sc. graduate in Electrical and Electronic Engineering from JUST, Bangladesh. Researcher in computational materials science, fusion plasma-material interactions, ML for physics, and signal processing.",
+      "email": "musavvirhaquepial@gmail.com",
+      "url": "https://musavvir-haque.github.io/",
+      "image": "https://musavvir-haque.github.io/photo.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/musavvir-haque-897463253/",
+        "https://scholar.google.com/citations?user=Cy5MITkAAAAJ&hl=en",
+        "https://orcid.org/0009-0008-0521-3474"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Jashore University of Science and Technology",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jessore",
+          "addressCountry": "BD"
+        }
+      },
+      "knowsAbout": [
+        "Molecular Dynamics Simulation",
+        "Density Functional Theory",
+        "Machine Learning",
+        "Signal Processing",
+        "Fusion Materials",
+        "Ion Implantation",
+        "LAMMPS",
+        "IEEE Signal Processing Society"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://musavvir-haque.github.io/#website",
+      "url": "https://musavvir-haque.github.io/",
+      "name": "Musavvir Haque Portfolio",
+      "author": { "@id": "https://musavvir-haque.github.io/#person" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Hydrogen Implantation and Diffusion in BCC Tungsten: A Systematic Molecular Dynamics Study over 5–300 eV and 300–1500 K",
+      "author": [{"@type": "Person","name": "Musavvir Haque"},{"@type": "Person","name": "Md. Amzad Hossain"}],
+      "description": "Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten across 1,000 simulations.",
+      "about": "Fusion Engineering and Design",
+      "keywords": ["Molecular Dynamics","Hydrogen Implantation","Tungsten","Fusion Materials","LAMMPS"]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Adaptive Multi-Scale VMD with Transfer Entropy for Real-Time Detection of Arrhythmia Transitions in Wearable ECG Devices",
+      "identifier": "https://doi.org/10.1109/ICECTE69292.2026.11429390",
+      "publisher": { "@type": "Organization", "name": "IEEE" },
+      "keywords": ["VMD","Transfer Entropy","ECG","Wearable","Signal Processing","Arrhythmia"]
+    }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     STYLES
+═══════════════════════════════════════════════ -->
 <style>
-  :root {
-    --bg: #080b12;
-    --bg2: #0d1120;
-    --bg3: #111827;
-    --accent: #7c3aed;
-    --accent2: #a855f7;
-    --accent3: #c084fc;
-    --text: #e2e8f0;
-    --muted: #8892a4;
-    --border: rgba(124,58,237,0.25);
-    --card: rgba(17,24,39,0.8);
-    --glow: rgba(124,58,237,0.15);
-  }
+/* ── DESIGN TOKENS ── */
+:root {
+  --ink:       #090d18;
+  --ink-2:     #0f1525;
+  --ink-3:     #151e30;
+  --ink-4:     #1c2640;
+  --plasma:    #6366f1;
+  --plasma-hi: #818cf8;
+  --plasma-lo: rgba(99,102,241,0.12);
+  --ion:       #22d3ee;
+  --ion-lo:    rgba(34,211,238,0.10);
+  --text:      #e2e8f0;
+  --text-2:    #cbd5e1;
+  --muted:     #8899b4;
+  --muted-2:   #64748b;
+  --border:    rgba(99,102,241,0.18);
+  --border-2:  rgba(255,255,255,0.06);
+  --card-bg:   rgba(15,21,37,0.7);
+  --glow-p:    rgba(99,102,241,0.25);
+  --glow-i:    rgba(34,211,238,0.2);
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+  --ff-display: 'Space Grotesk', system-ui, sans-serif;
+  --ff-body:    'Inter', system-ui, sans-serif;
+  --transition: 0.22s ease;
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 15px; }
 
-  html { scroll-behavior: smooth; }
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--ff-body);
+  line-height: 1.72;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--plasma); border-radius: 3px; }
 
-  /* ── NOISE OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.4;
-  }
+/* ── SCROLL PROGRESS BAR ── */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--plasma), var(--ion));
+  width: 0%;
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
 
-  /* ── SCROLL BAR ── */
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+/* ── LATTICE BACKGROUND (atomic BCC pattern — our signature element) ── */
+.lattice-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.lattice-bg svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.035;
+}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(8,11,18,0.85);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 62px;
-  }
+/* ── NAV ── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 900;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+  background: rgba(9,13,24,0.82);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid var(--border-2);
+  transition: box-shadow var(--transition);
+}
+#nav.scrolled { box-shadow: 0 1px 32px rgba(0,0,0,0.4); }
 
-  .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800; font-size: 1.2rem;
-    color: #fff;
-    letter-spacing: -0.5px;
-  }
-  .nav-logo span { color: var(--accent2); }
+.nav-logo {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.nav-logo-dot { color: var(--plasma-hi); }
 
-  .nav-links {
-    display: flex; gap: 2rem; list-style: none;
-  }
-  .nav-links a {
-    color: var(--muted); text-decoration: none;
-    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent3); }
+.nav-links {
+  display: flex; align-items: center; gap: 0.25rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+}
+.nav-links a:hover,
+.nav-links a.active { color: #fff; background: var(--plasma-lo); }
+.nav-links .nav-cta {
+  color: #fff !important;
+  background: var(--plasma);
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.nav-links .nav-cta:hover { background: var(--plasma-hi); }
 
-  .nav-cta {
-    background: var(--accent); color: #fff !important;
-    padding: 0.45rem 1.1rem; border-radius: 6px;
-    font-size: 0.82rem !important;
-    transition: background 0.2s, transform 0.2s !important;
-  }
-  .nav-cta:hover { background: var(--accent2) !important; transform: translateY(-1px); }
+/* hamburger */
+.hamburger {
+  display: none; flex-direction: column; gap: 4.5px;
+  cursor: pointer; background: none; border: none; padding: 6px;
+  border-radius: 6px;
+}
+.hamburger span {
+  display: block; width: 20px; height: 1.5px;
+  background: var(--text); border-radius: 2px; transition: 0.3s;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-  /* hamburger */
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
-  .mobile-nav { display: none; flex-direction: column; position: fixed; top: 62px; left: 0; width: 100%; background: rgba(8,11,18,0.97); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1rem; z-index: 99; }
-  .mobile-nav a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
-  .mobile-nav.open { display: flex; }
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: rgba(9,13,24,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 5%;
+  gap: 0.25rem;
+  z-index: 899;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  color: var(--text); text-decoration: none;
+  font-size: 0.95rem; font-weight: 500;
+  padding: 0.6rem 0.8rem; border-radius: 6px;
+  transition: background var(--transition), color var(--transition);
+}
+.mobile-nav a:hover { background: var(--plasma-lo); color: var(--plasma-hi); }
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding: 100px 8% 60px;
-    position: relative;
-    overflow: hidden;
-  }
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  padding: 120px 7% 80px;
+  display: flex; align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* big glowing orbs */
-  #hero::before, #hero::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    pointer-events: none;
-  }
-  #hero::before {
-    width: 500px; height: 500px;
-    background: rgba(124,58,237,0.18);
-    top: -100px; left: -100px;
-  }
-  #hero::after {
-    width: 400px; height: 400px;
-    background: rgba(168,85,247,0.12);
-    bottom: 0; right: 0;
-  }
+/* Ambient orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  animation: orb-drift 12s ease-in-out infinite alternate;
+}
+.orb-1 { width: 600px; height: 600px; background: rgba(99,102,241,0.14); top: -150px; left: -200px; }
+.orb-2 { width: 400px; height: 400px; background: rgba(34,211,238,0.09); bottom: -80px; right: -100px; animation-delay: -6s; }
+@keyframes orb-drift { from { transform: translate(0,0) scale(1); } to { transform: translate(30px,20px) scale(1.06); } }
 
-  .hero-inner {
-    display: flex; align-items: center;
-    justify-content: space-between; gap: 4rem;
-    width: 100%; max-width: 1200px; margin: 0 auto;
-    position: relative; z-index: 1;
-  }
+.hero-inner {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 5rem;
+  max-width: 1180px; margin: 0 auto;
+  width: 100%; position: relative; z-index: 1;
+}
 
-  .hero-text { flex: 1; max-width: 600px; }
+.hero-copy { flex: 1; max-width: 620px; }
 
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(124,58,237,0.15);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 0.3rem 0.9rem;
-    font-size: 0.78rem; color: var(--accent3);
-    margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s ease forwards;
-  }
-  .badge-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.3rem 0.9rem;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.25);
+  border-radius: 100px;
+  font-size: 0.76rem; font-weight: 500;
+  color: var(--plasma-hi);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.6rem;
+  animation: fade-up 0.55s ease both;
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+  animation: blink 2.2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+.hero-name {
+  font-family: var(--ff-display);
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -2px;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  animation: fade-up 0.55s 0.08s ease both;
+}
+.hero-name-accent { color: var(--plasma-hi); }
 
-  .hero-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    font-weight: 800; line-height: 1.05;
-    letter-spacing: -1.5px;
-    color: #fff;
-    margin-bottom: 0.4rem;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
+.hero-tagline {
+  font-size: 1.02rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 1.8rem;
+  line-height: 1.65;
+  animation: fade-up 0.55s 0.15s ease both;
+}
 
-  .hero-title-accent {
-    color: var(--accent2);
-    display: block;
-  }
+.hero-chips {
+  display: flex; flex-wrap: wrap; gap: 0.45rem;
+  margin-bottom: 2.2rem;
+  animation: fade-up 0.55s 0.22s ease both;
+}
+.chip {
+  background: var(--plasma-lo);
+  border: 1px solid rgba(99,102,241,0.22);
+  color: var(--plasma-hi);
+  font-size: 0.73rem; font-weight: 500;
+  padding: 0.22rem 0.65rem; border-radius: 100px;
+  letter-spacing: 0.015em;
+}
 
-  .hero-sub {
-    font-size: 1rem; color: var(--muted);
-    margin-bottom: 1.6rem; max-width: 480px;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
+.hero-actions {
+  display: flex; gap: 0.8rem; flex-wrap: wrap;
+  animation: fade-up 0.55s 0.28s ease both;
+}
 
-  .hero-tags {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-    margin-bottom: 2rem;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
-  .tag {
-    background: rgba(124,58,237,0.12);
-    border: 1px solid var(--border);
-    color: var(--accent3);
-    padding: 0.25rem 0.7rem;
-    border-radius: 4px; font-size: 0.75rem;
-  }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.72rem 1.6rem; border-radius: var(--radius-sm);
+  font-size: 0.88rem; font-weight: 600; text-decoration: none;
+  transition: all var(--transition); cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--plasma); color: #fff;
+  box-shadow: 0 0 28px rgba(99,102,241,0.35);
+}
+.btn-primary:hover {
+  background: var(--plasma-hi);
+  box-shadow: 0 0 40px rgba(129,140,248,0.45);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+}
+.btn-ghost:hover {
+  border-color: rgba(99,102,241,0.4);
+  color: #fff; background: var(--plasma-lo);
+  transform: translateY(-2px);
+}
 
-  .hero-actions {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.4s ease both;
-  }
+.hero-stats {
+  display: flex; gap: 2rem; margin-top: 2.8rem;
+  animation: fade-up 0.55s 0.35s ease both;
+}
+.hero-stat { position: relative; }
+.hero-stat::after {
+  content: '';
+  position: absolute; right: -1rem; top: 8px; bottom: 8px;
+  width: 1px; background: var(--border-2);
+}
+.hero-stat:last-child::after { display: none; }
+.stat-num {
+  font-family: var(--ff-display);
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--plasma-hi); line-height: 1;
+  letter-spacing: -0.5px;
+}
+.stat-lbl { font-size: 0.68rem; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
 
-  .btn-primary {
-    background: var(--accent); color: #fff;
-    padding: 0.75rem 1.8rem; border-radius: 8px;
-    text-decoration: none; font-weight: 600; font-size: 0.9rem;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 24px rgba(124,58,237,0.4);
-  }
-  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 0 36px rgba(168,85,247,0.5); }
+/* Photo card */
+.hero-visual { flex-shrink: 0; animation: fade-up 0.7s 0.1s ease both; }
 
-  .btn-outline {
-    background: transparent;
-    border: 1px solid var(--border); color: var(--text);
-    padding: 0.75rem 1.8rem; border-radius: 8px;
-    text-decoration: none; font-weight: 500; font-size: 0.9rem;
-    transition: border-color 0.2s, color 0.2s, transform 0.2s;
-  }
-  .btn-outline:hover { border-color: var(--accent2); color: var(--accent3); transform: translateY(-2px); }
+.photo-card {
+  position: relative;
+  width: 310px;
+}
+.photo-frame {
+  width: 100%; aspect-ratio: 5/6;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--ink-3);
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.photo-frame:hover { transform: translateY(-5px); box-shadow: 0 24px 64px rgba(99,102,241,0.2); }
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.photo-frame:hover img { transform: scale(1.04); }
 
-  /* photo card */
-  .hero-photo {
-    flex-shrink: 0;
-    position: relative;
-    animation: fadeUp 0.8s 0.2s ease both;
-  }
+/* Corner brackets — signature detail */
+.corner {
+  position: absolute;
+  width: 22px; height: 22px;
+  border-color: var(--plasma-hi);
+  border-style: solid;
+  z-index: 4;
+}
+.corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; border-radius: 4px 0 0 0; }
+.corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; border-radius: 0 0 4px 0; }
 
-  .photo-frame {
-    width: 300px; height: 360px;
-    border-radius: 20px;
-    border: 2px solid var(--border);
-    overflow: hidden;
-    position: relative;
-    background: var(--bg2);
-    cursor: default;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .photo-frame:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(124,58,237,0.25); }
+/* glow ring behind photo */
+.photo-glow {
+  position: absolute;
+  inset: -20px; border-radius: 28px;
+  background: radial-gradient(ellipse at center, rgba(99,102,241,0.12) 0%, transparent 70%);
+  z-index: -1;
+}
 
-  .photo-frame img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    transition: transform 0.4s;
-  }
-  .photo-frame:hover img { transform: scale(1.03); }
+/* ── SECTION SHARED ── */
+.section { padding: 96px 7%; }
+.section-alt { background: var(--ink-2); }
+.inner { max-width: 1100px; margin: 0 auto; }
 
-  /* decorative corner lines */
-  .photo-frame::before, .photo-frame::after {
-    content: '';
-    position: absolute;
-    width: 28px; height: 28px;
-    border-color: var(--accent2);
-    border-style: solid;
-    z-index: 3;
-  }
-  .photo-frame::before { top: -2px; left: -2px; border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
-  .photo-frame::after  { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.13em;
+  color: var(--plasma-hi);
+  background: var(--plasma-lo);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.section-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.45rem;
+  line-height: 1.1;
+}
+.section-title em { color: var(--plasma-hi); font-style: normal; }
+.section-rule {
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, var(--plasma), transparent);
+  border-radius: 2px; margin-bottom: 3rem;
+}
 
-  .hero-stat-row {
-    display: flex; gap: 1.5rem;
-    margin-top: 2rem;
-    animation: fadeUp 0.6s 0.5s ease both;
-  }
-  .hero-stat { text-align: center; }
-  .hero-stat .num { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--accent2); line-height: 1; }
-  .hero-stat .lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
 
-  /* ── SECTIONS ── */
-  section { padding: 90px 8%; }
-  .container { max-width: 1100px; margin: 0 auto; }
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 4.5rem; align-items: start; }
+.about-body p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; font-size: 0.93rem; }
+.about-meta { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.meta-row { display: flex; gap: 1rem; align-items: baseline; font-size: 0.85rem; }
+.meta-label { color: var(--plasma-hi); font-weight: 600; min-width: 88px; flex-shrink: 0; }
+.meta-value { color: var(--text-2); }
+.meta-value a { color: var(--plasma-hi); text-decoration: none; }
+.meta-value a:hover { text-decoration: underline; }
 
-  .section-tag {
-    display: inline-block;
-    font-size: 0.72rem; color: var(--accent3);
-    text-transform: uppercase; letter-spacing: 0.12em;
-    font-weight: 600; margin-bottom: 0.6rem;
-    padding: 0.2rem 0.6rem;
-    background: rgba(124,58,237,0.1);
-    border: 1px solid var(--border); border-radius: 4px;
-  }
+.about-cards { display: flex; flex-direction: column; gap: 0.9rem; }
+.about-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.3rem;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.about-card:hover { border-color: rgba(99,102,241,0.35); transform: translateX(4px); }
+.card-icon {
+  width: 36px; height: 36px; border-radius: var(--radius-sm);
+  background: var(--plasma-lo); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+.about-card h4 { font-family: var(--ff-display); font-size: 0.87rem; font-weight: 600; color: #fff; margin-bottom: 0.2rem; }
+.about-card p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.about-card p a { color: var(--plasma-hi); text-decoration: none; }
 
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 800; letter-spacing: -0.5px;
-    color: #fff; margin-bottom: 0.5rem;
-  }
+/* ── PUBLICATIONS ── */
+.pub-list { display: flex; flex-direction: column; gap: 1rem; }
+.pub-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-left: 3px solid var(--plasma);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.3rem 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.pub-card:hover {
+  border-color: rgba(99,102,241,0.4);
+  border-left-color: var(--ion);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(0,0,0,0.25);
+}
+.pub-badge {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--plasma-hi);
+  background: var(--plasma-lo);
+  border-radius: 3px; padding: 0.14rem 0.45rem;
+  margin-bottom: 0.55rem;
+}
+.pub-title {
+  font-family: var(--ff-display);
+  font-size: 0.93rem; font-weight: 600;
+  color: #fff; line-height: 1.4;
+  margin-bottom: 0.45rem;
+}
+.pub-meta { font-size: 0.78rem; color: var(--muted-2); margin-bottom: 0.4rem; }
+.pub-meta em { font-style: italic; color: var(--muted); }
+.pub-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.72; margin-bottom: 0.5rem; }
+.pub-doi {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  color: var(--ion); font-size: 0.78rem; text-decoration: none;
+  font-family: ui-monospace, monospace;
+  transition: color var(--transition);
+}
+.pub-doi:hover { color: #fff; }
+.pub-doi::before { content: '↗'; font-family: system-ui; }
+.kw-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+.kw {
+  background: rgba(34,211,238,0.07);
+  border: 1px solid rgba(34,211,238,0.15);
+  color: var(--ion);
+  font-size: 0.68rem; padding: 0.12rem 0.45rem; border-radius: 3px;
+}
 
-  .section-title span { color: var(--accent2); }
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1rem;
+}
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.skill-card:hover { border-color: rgba(99,102,241,0.3); transform: translateY(-3px); }
+.skill-head { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1rem; }
+.skill-icon { font-size: 1.1rem; }
+.skill-head h4 { font-family: var(--ff-display); font-size: 0.83rem; font-weight: 600; color: #fff; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.pill {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  font-size: 0.72rem; padding: 0.22rem 0.58rem; border-radius: 100px;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+.pill:hover {
+  background: var(--plasma-lo);
+  border-color: rgba(99,102,241,0.35);
+  color: var(--plasma-hi);
+}
 
-  .section-line {
-    width: 48px; height: 3px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    border-radius: 2px; margin-bottom: 3rem;
-    margin-top: 0.6rem;
-  }
+/* ── PROJECTS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  backdrop-filter: blur(10px);
+  display: flex; flex-direction: column;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.project-card:hover {
+  border-color: rgba(99,102,241,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 44px rgba(0,0,0,0.3);
+}
+.project-date {
+  font-size: 0.7rem; font-weight: 600; color: var(--plasma-hi);
+  letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.55rem;
+}
+.project-card h3 {
+  font-family: var(--ff-display);
+  font-size: 0.9rem; font-weight: 600;
+  color: #fff; margin-bottom: 0.65rem; line-height: 1.38;
+}
+.project-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.7; flex: 1; }
 
-  /* ── ABOUT ── */
-  #about { background: var(--bg2); }
+/* ── AWARDS ── */
+.awards-list { display: flex; flex-direction: column; gap: 0.9rem; }
+.award-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.35rem;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.award-card:hover { border-color: rgba(250,189,0,0.3); transform: translateX(4px); }
+.award-icon { font-size: 1.5rem; flex-shrink: 0; }
+.award-card h4 { font-family: var(--ff-display); font-size: 0.88rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
+.award-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
 
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: start;
-  }
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 0; top: 8px; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--plasma) 0%, transparent 100%);
+}
+.tl-item { position: relative; margin-bottom: 2.2rem; }
+.tl-item::before {
+  content: '';
+  position: absolute; left: -2.5rem; top: 7px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--plasma-hi);
+  border: 2px solid var(--ink);
+  box-shadow: 0 0 10px var(--plasma);
+}
+.tl-date { font-size: 0.73rem; color: var(--plasma-hi); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+.tl-title { font-family: var(--ff-display); font-size: 0.93rem; font-weight: 600; color: #fff; margin-bottom: 0.15rem; }
+.tl-org { font-size: 0.8rem; color: var(--muted-2); margin-bottom: 0.5rem; }
+.tl-org a { color: var(--plasma-hi); text-decoration: none; }
+.tl-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.72; }
 
-  .about-text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+/* ── CERTIFICATIONS ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.7rem;
+}
+.cert-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition);
+}
+.cert-card:hover { border-color: rgba(99,102,241,0.3); }
+.cert-card strong { display: block; color: #fff; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.2rem; }
+.cert-card span { font-size: 0.75rem; color: var(--muted-2); display: block; line-height: 1.5; }
+.cert-card a { color: var(--plasma-hi); font-size: 0.73rem; text-decoration: none; display: inline-block; margin-top: 0.2rem; }
+.cert-card a:hover { text-decoration: underline; }
 
-  .about-info { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
-  .info-row { display: flex; gap: 1rem; align-items: flex-start; font-size: 0.88rem; }
-  .info-label { color: var(--accent3); font-weight: 600; min-width: 90px; }
-  .info-value { color: var(--text); }
+/* ── CONTACT ── */
+.contact-wrap { max-width: 620px; margin: 0 auto; text-align: center; }
+.contact-wrap > p { color: var(--muted); margin-bottom: 2.2rem; font-size: 0.95rem; }
 
-  .about-cards { display: flex; flex-direction: column; gap: 1rem; }
-  .about-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.2rem 1.4rem;
-    display: flex; align-items: flex-start; gap: 1rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .about-card:hover { border-color: var(--accent2); transform: translateX(4px); }
-  .about-card-icon {
-    width: 38px; height: 38px; border-radius: 8px;
-    background: rgba(124,58,237,0.2); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-  .about-card h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
-  .about-card p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+.contact-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 3.5rem; }
+.contact-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.65rem 1.2rem; border-radius: var(--radius-sm);
+  text-decoration: none; font-size: 0.83rem; font-weight: 500;
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition);
+}
+.contact-btn:hover { border-color: rgba(99,102,241,0.35); color: var(--plasma-hi); transform: translateY(-2px); }
+.contact-btn.primary { background: var(--plasma); border-color: var(--plasma); color: #fff; box-shadow: 0 0 28px rgba(99,102,241,0.3); }
+.contact-btn.primary:hover { background: var(--plasma-hi); }
+.contact-btn svg { flex-shrink: 0; }
 
-  /* ── RESEARCH / PUBLICATIONS ── */
-  #research { background: var(--bg); }
+.refs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.9rem; text-align: left; }
+.ref-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  backdrop-filter: blur(10px);
+}
+.ref-card h4 { font-family: var(--ff-display); font-size: 0.83rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
+.ref-card p { font-size: 0.73rem; color: var(--muted-2); line-height: 1.5; }
+.ref-card a { color: var(--plasma-hi); font-size: 0.73rem; text-decoration: none; display: block; margin-top: 0.3rem; }
+.ref-card a:hover { text-decoration: underline; }
 
-  .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
+/* ── FOOTER ── */
+footer {
+  background: var(--ink-2);
+  border-top: 1px solid var(--border-2);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.78rem;
+  color: var(--muted-2);
+}
+footer a { color: var(--plasma-hi); text-decoration: none; }
+footer p + p { margin-top: 0.35rem; }
 
-  .pub-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.4rem 1.6rem;
-    position: relative; overflow: hidden;
-    transition: border-color 0.25s, transform 0.25s;
-  }
-  .pub-card::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0;
-    width: 3px; background: linear-gradient(180deg, var(--accent), var(--accent2));
-    border-radius: 3px 0 0 3px;
-  }
-  .pub-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+/* ── BACK TO TOP ── */
+#back-top {
+  position: fixed; bottom: 2rem; right: 2rem;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--plasma);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 800;
+}
+#back-top.visible { opacity: 1; pointer-events: all; }
+#back-top:hover { transform: translateY(-3px); background: var(--plasma-hi); }
 
-  .pub-type {
-    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--accent3); font-weight: 700;
-    background: rgba(124,58,237,0.1); border-radius: 3px;
-    padding: 0.15rem 0.5rem; display: inline-block; margin-bottom: 0.5rem;
-  }
-  .pub-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.4; }
-  .pub-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
-  .pub-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
-  .pub-link { color: var(--accent3); font-size: 0.8rem; text-decoration: none; margin-top: 0.5rem; display: inline-block; transition: color 0.2s; }
-  .pub-link:hover { color: #fff; }
-  .pub-keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
-  .kw { background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.2); color: var(--accent3); font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 3px; }
+/* ── KEYFRAMES ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-  /* ── SKILLS ── */
-  #skills { background: var(--bg2); }
+/* ── RESPONSIVE ── */
+@media (max-width: 920px) {
+  .hero-inner { flex-direction: column-reverse; text-align: center; }
+  .hero-chips, .hero-actions, .hero-stats { justify-content: center; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .refs-grid { grid-template-columns: 1fr; }
+  .photo-card { width: 240px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+@media (max-width: 640px) {
+  .section { padding: 64px 5%; }
+  #hero { padding: 100px 5% 64px; }
+  .hero-name { letter-spacing: -1px; }
+  .hero-stats { gap: 1.3rem; }
+  .stat-num { font-size: 1.5rem; }
+}
 
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
+/* ── FOCUS STATES (accessibility) ── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--plasma-hi);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
-  .skill-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.3rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .skill-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
-  .skill-card-header { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
-  .skill-icon { font-size: 1.3rem; }
-  .skill-card h4 { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; color: #fff; }
-
-  .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .pill {
-    background: rgba(124,58,237,0.1);
-    border: 1px solid rgba(124,58,237,0.2);
-    color: var(--text); font-size: 0.75rem;
-    padding: 0.25rem 0.65rem; border-radius: 100px;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .pill:hover { background: rgba(124,58,237,0.25); border-color: var(--accent2); color: var(--accent3); }
-
-  /* ── PROJECTS ── */
-  #projects { background: var(--bg); }
-
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
-
-  .project-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.4rem;
-    transition: border-color 0.25s, transform 0.25s;
-    display: flex; flex-direction: column;
-  }
-  .project-card:hover { border-color: var(--accent2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,0.12); }
-  .project-date { font-size: 0.72rem; color: var(--accent3); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  .project-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.7rem; line-height: 1.35; }
-  .project-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; flex: 1; }
-
-  /* ── AWARDS ── */
-  #awards { background: var(--bg2); }
-
-  .awards-list { display: flex; flex-direction: column; gap: 1rem; }
-  .award-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.2rem 1.4rem;
-    display: flex; align-items: flex-start; gap: 1rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .award-card:hover { border-color: #f59e0b; transform: translateX(4px); }
-  .award-medal { font-size: 1.6rem; flex-shrink: 0; }
-  .award-card h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
-  .award-card p { font-size: 0.8rem; color: var(--muted); }
-
-  /* ── EXPERIENCE ── */
-  #experience { background: var(--bg); }
-
-  .timeline { position: relative; padding-left: 2rem; }
-  .timeline::before {
-    content: '';
-    position: absolute; left: 0; top: 6px; bottom: 0;
-    width: 1px; background: linear-gradient(180deg, var(--accent), transparent);
-  }
-
-  .timeline-item { position: relative; margin-bottom: 2rem; }
-  .timeline-item::before {
-    content: '';
-    position: absolute; left: -2.45rem; top: 6px;
-    width: 10px; height: 10px; border-radius: 50%;
-    background: var(--accent2); border: 2px solid var(--bg);
-    box-shadow: 0 0 10px var(--accent);
-  }
-  .timeline-date { font-size: 0.75rem; color: var(--accent3); font-weight: 600; margin-bottom: 0.3rem; }
-  .timeline-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.15rem; }
-  .timeline-org { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
-  .timeline-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
-
-  /* ── CERTIFICATIONS ── */
-  #certifications { background: var(--bg2); }
-  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.8rem; }
-  .cert-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1rem 1.2rem;
-    transition: border-color 0.2s;
-    font-size: 0.82rem;
-  }
-  .cert-card:hover { border-color: var(--accent2); }
-  .cert-card strong { display: block; color: #fff; font-size: 0.85rem; margin-bottom: 0.2rem; }
-  .cert-card span { color: var(--muted); font-size: 0.78rem; }
-  .cert-link { color: var(--accent3); font-size: 0.75rem; text-decoration: none; }
-  .cert-link:hover { color: #fff; }
-
-  /* ── CONTACT ── */
-  #contact {
-    background: var(--bg);
-    text-align: center;
-  }
-  .contact-inner { max-width: 600px; margin: 0 auto; }
-  .contact-inner p { color: var(--muted); margin-bottom: 2rem; }
-
-  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-  .contact-btn {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--card); border: 1px solid var(--border);
-    color: var(--text); padding: 0.7rem 1.3rem;
-    border-radius: 8px; text-decoration: none;
-    font-size: 0.85rem; font-weight: 500;
-    transition: border-color 0.2s, color 0.2s, transform 0.2s;
-  }
-  .contact-btn:hover { border-color: var(--accent2); color: var(--accent3); transform: translateY(-2px); }
-  .contact-btn.primary-btn { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 24px rgba(124,58,237,0.3); }
-  .contact-btn.primary-btn:hover { background: var(--accent2); }
-
-  .refs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; text-align: left; }
-  .ref-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1rem;
-  }
-  .ref-card h4 { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff; }
-  .ref-card p { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
-  .ref-card a { color: var(--accent3); font-size: 0.75rem; text-decoration: none; margin-top: 0.3rem; display: block; }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-  footer a { color: var(--accent3); text-decoration: none; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0; transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero-inner { flex-direction: column-reverse; text-align: center; }
-    .hero-tags { justify-content: center; }
-    .hero-actions { justify-content: center; }
-    .hero-stat-row { justify-content: center; }
-    .about-grid { grid-template-columns: 1fr; }
-    .refs-grid { grid-template-columns: 1fr; }
-    nav .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .photo-frame { width: 220px; height: 280px; }
-  }
-
-  @media (max-width: 600px) {
-    section { padding: 60px 5%; }
-  }
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">MH<span>.</span></div>
-  <ul class="nav-links">
+<!-- SCROLL PROGRESS -->
+<div id="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
+
+<!-- ═══════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════ -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-label="Musavvir Haque — home">MH<span class="nav-logo-dot">.</span></a>
+  <ul class="nav-links" role="list">
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -520,249 +808,320 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
+  <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMenu(this)">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
   </button>
 </nav>
 
-<div class="mobile-nav" id="mobileNav">
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#research" onclick="toggleMenu()">Research</a>
-  <a href="#skills" onclick="toggleMenu()">Skills</a>
-  <a href="#projects" onclick="toggleMenu()">Projects</a>
-  <a href="#awards" onclick="toggleMenu()">Awards</a>
-  <a href="#experience" onclick="toggleMenu()">Experience</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+  <a href="#about"      onclick="closeMobile()">About</a>
+  <a href="#research"   onclick="closeMobile()">Research</a>
+  <a href="#skills"     onclick="closeMobile()">Skills</a>
+  <a href="#projects"   onclick="closeMobile()">Projects</a>
+  <a href="#awards"     onclick="closeMobile()">Awards</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#contact"    onclick="closeMobile()">Contact</a>
+</nav>
 
-<!-- HERO -->
-<section id="hero">
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<header id="hero" role="banner">
+  <!-- BCC lattice background — nods to BCC tungsten research -->
+  <div class="lattice-bg" aria-hidden="true">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="bcc" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+          <!-- BCC unit cell projection -->
+          <rect x="5" y="5" width="50" height="50" fill="none" stroke="#818cf8" stroke-width="0.6"/>
+          <circle cx="5"  cy="5"  r="2" fill="#818cf8"/>
+          <circle cx="55" cy="5"  r="2" fill="#818cf8"/>
+          <circle cx="5"  cy="55" r="2" fill="#818cf8"/>
+          <circle cx="55" cy="55" r="2" fill="#818cf8"/>
+          <circle cx="30" cy="30" r="2.2" fill="#22d3ee"/>
+          <line x1="5" y1="5" x2="30" y2="30" stroke="#818cf8" stroke-width="0.4" stroke-dasharray="3,3"/>
+          <line x1="55" y1="5" x2="30" y2="30" stroke="#818cf8" stroke-width="0.4" stroke-dasharray="3,3"/>
+          <line x1="5" y1="55" x2="30" y2="30" stroke="#818cf8" stroke-width="0.4" stroke-dasharray="3,3"/>
+          <line x1="55" y1="55" x2="30" y2="30" stroke="#818cf8" stroke-width="0.4" stroke-dasharray="3,3"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bcc)"/>
+    </svg>
+  </div>
+
+  <!-- ambient orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+
   <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
+    <div class="hero-copy">
+      <p class="hero-eyebrow">
+        <span class="live-dot" aria-hidden="true"></span>
         Available for Research Collaboration &amp; PhD Opportunities
-      </div>
-      <h1 class="hero-title">
+      </p>
+      <h1 class="hero-name">
         Musavvir<br>
-        <span class="hero-title-accent">Haque</span>
+        <span class="hero-name-accent">Haque</span>
       </h1>
-      <!-- UPDATED: graduated, ex-chair -->
-      <p class="hero-sub">EEE Graduate · Ex-IEEE SPS Chapter Chair · Computational Materials Scientist &amp; ML Engineer | Jashore University of Science &amp; Technology</p>
-      <div class="hero-tags">
-        <span class="tag">Fusion Materials</span>
-        <span class="tag">Molecular Dynamics</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Signal Processing</span>
-        <span class="tag">DFT/MD Simulation</span>
-        <span class="tag">IEEE Leader</span>
+      <p class="hero-tagline">EEE Graduate &middot; Ex-IEEE SPS Chapter Chair &middot; Computational Materials Scientist &amp; ML Engineer | Jashore University of Science &amp; Technology</p>
+      <div class="hero-chips" role="list" aria-label="Research areas">
+        <span class="chip" role="listitem">Fusion Materials</span>
+        <span class="chip" role="listitem">Molecular Dynamics</span>
+        <span class="chip" role="listitem">Machine Learning</span>
+        <span class="chip" role="listitem">Signal Processing</span>
+        <span class="chip" role="listitem">DFT/MD Simulation</span>
+        <span class="chip" role="listitem">IEEE Leader</span>
       </div>
       <div class="hero-actions">
-        <a href="#research" class="btn-primary">View Research</a>
-        <a href="mailto:musavvirhaquepial@gmail.com" class="btn-outline">Get In Touch</a>
+        <a href="#research" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Research
+        </a>
+        <a href="mailto:musavvirhaquepial@gmail.com" class="btn btn-ghost">
+          Get In Touch
+        </a>
       </div>
-      <!-- UPDATED: 6+ publications, 2 under review -->
-      <div class="hero-stat-row">
-        <div class="hero-stat"><div class="num">4+</div><div class="lbl">Publications</div></div>
-        <div class="hero-stat"><div class="num">2</div><div class="lbl">Under Review</div></div>
-        <div class="hero-stat"><div class="num">3.47</div><div class="lbl">CGPA</div></div>
-        <div class="hero-stat"><div class="num">3</div><div class="lbl">Awards</div></div>
+      <div class="hero-stats" role="list" aria-label="Key statistics">
+        <div class="hero-stat" role="listitem">
+          <div class="stat-num">4+</div>
+          <div class="stat-lbl">Publications</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="stat-num">2</div>
+          <div class="stat-lbl">Under Review</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="stat-num">3.47</div>
+          <div class="stat-lbl">CGPA</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="stat-num">3</div>
+          <div class="stat-lbl">Awards</div>
+        </div>
       </div>
     </div>
 
-    <div class="hero-photo">
-      <div class="photo-frame">
-        <img id="hero-img"
-             src="https://musavvir-haque.github.io/photo.jpg"
-             alt="Musavvir Haque"
-             onerror="this.style.display='none'">
+    <div class="hero-visual">
+      <div class="photo-card">
+        <div class="photo-glow" aria-hidden="true"></div>
+        <div class="photo-frame">
+          <img
+            src="https://musavvir-haque.github.io/photo.jpg"
+            alt="Musavvir Haque — EEE Researcher and IEEE Leader"
+            loading="lazy"
+            onerror="this.style.display='none'">
+          <div class="corner corner-tl" aria-hidden="true"></div>
+          <div class="corner corner-br" aria-hidden="true"></div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</header>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <span class="section-tag">Introduction</span>
-    <h2 class="section-title">About <span>Me</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     ABOUT
+═══════════════════════════════════ -->
+<section id="about" class="section section-alt">
+  <div class="inner">
+    <span class="eyebrow">Introduction</span>
+    <h2 class="section-title">About <em>Me</em></h2>
+    <div class="section-rule"></div>
     <div class="about-grid reveal">
-      <div class="about-text">
-        <!-- UPDATED: graduate, not final-year student -->
+      <div class="about-body">
         <p>I am an aspiring PhD researcher and B.Sc. graduate (2026) in Electrical and Electronic Engineering from Jashore University of Science and Technology (JUST), Bangladesh. My research bridges computational materials science, machine learning, and signal processing.</p>
         <p>My primary focus is on plasma–material interactions in fusion-relevant tungsten, ML-accelerated materials modelling (DFT/MD surrogates), ion implantation physics in semiconductor substrates, and real-time wearable biosignal processing using advanced signal decomposition.</p>
         <p>Beyond research, I served as Chair of the IEEE Signal Processing Society JUST Student Branch Chapter, where I organised technical events, the SigMa Mentorship Programme 2026, and workshops fostering undergraduate research culture.</p>
-        <div class="about-info">
-          <div class="info-row"><span class="info-label">Location</span><span class="info-value">Jessore, Khulna, Bangladesh</span></div>
-          <!-- UPDATED: graduated -->
-          <div class="info-row"><span class="info-label">Degree</span><span class="info-value">B.Sc. EEE, JUST (2022–2026) — Graduated</span></div>
-          <div class="info-row"><span class="info-label">CGPA</span><span class="info-value">3.47 / 4.00</span></div>
-          <!-- UPDATED: Ex-Chair -->
-          <div class="info-row"><span class="info-label">IEEE Role</span><span class="info-value">Ex-Chair, IEEE SPS JUST SBC (2025)</span></div>
-          <div class="info-row"><span class="info-label">English</span><span class="info-value">C2 Proficient — EF SET 82/100</span></div>
-          <div class="info-row"><span class="info-label">Email</span><span class="info-value"><a href="mailto:musavvirhaquepial@gmail.com" style="color:var(--accent3);text-decoration:none">musavvirhaquepial@gmail.com</a></span></div>
-          <div class="info-row"><span class="info-label">Scholar</span><span class="info-value"><a href="https://scholar.google.com/citations?user=Cy5MITkAAAAJ&hl=en" target="_blank" style="color:var(--accent3);text-decoration:none">Google Scholar ↗</a></span></div>
-          <div class="info-row"><span class="info-label">ORCID</span><span class="info-value"><a href="https://orcid.org/0009-0008-0521-3474" target="_blank" style="color:var(--accent3);text-decoration:none">0009-0008-0521-3474 ↗</a></span></div>
+        <div class="about-meta">
+          <div class="meta-row"><span class="meta-label">Location</span><span class="meta-value">Jessore, Khulna, Bangladesh</span></div>
+          <div class="meta-row"><span class="meta-label">Degree</span><span class="meta-value">B.Sc. EEE, JUST (2022–2026) — Graduated</span></div>
+          <div class="meta-row"><span class="meta-label">CGPA</span><span class="meta-value">3.47 / 4.00</span></div>
+          <div class="meta-row"><span class="meta-label">IEEE Role</span><span class="meta-value">Ex-Chair, IEEE SPS JUST SBC (2025)</span></div>
+          <div class="meta-row"><span class="meta-label">English</span><span class="meta-value">C2 Proficient — EF SET 82/100</span></div>
+          <div class="meta-row"><span class="meta-label">Email</span><span class="meta-value"><a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></span></div>
+          <div class="meta-row"><span class="meta-label">Scholar</span><span class="meta-value"><a href="https://scholar.google.com/citations?user=Cy5MITkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></span></div>
+          <div class="meta-row"><span class="meta-label">ORCID</span><span class="meta-value"><a href="https://orcid.org/0009-0008-0521-3474" target="_blank" rel="noopener">0009-0008-0521-3474 ↗</a></span></div>
         </div>
       </div>
       <div class="about-cards">
-        <div class="about-card">
-          <div class="about-card-icon">⚛️</div>
+        <article class="about-card">
+          <div class="card-icon" aria-hidden="true">⚛️</div>
           <div>
+            <h3 class="sr-only">Expertise:</h3>
             <h4>Computational Materials Science</h4>
             <p>Large-scale MD simulation using LAMMPS; DFT calculations with GPAW/VASP; fusion-relevant plasma–material interactions in BCC tungsten across energy and temperature space.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">🤖</div>
+        </article>
+        <article class="about-card">
+          <div class="card-icon" aria-hidden="true">🤖</div>
           <div>
             <h4>Machine Learning for Physics</h4>
             <p>XGBoost &amp; Random Forest ML surrogates for DFT/MD predictions; ion implantation modelling in Si, SiC, and GaAs semiconductor substrates.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">📡</div>
+        </article>
+        <article class="about-card">
+          <div class="card-icon" aria-hidden="true">📡</div>
           <div>
             <h4>Signal Processing &amp; Wearables</h4>
             <p>Adaptive VMD with transfer entropy for real-time ECG arrhythmia detection; embedded AI for next-gen wearable devices.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">🔬</div>
+        </article>
+        <article class="about-card">
+          <div class="card-icon" aria-hidden="true">🔬</div>
           <div>
             <h4>ILAMPS Researcher</h4>
-            <p>Student Researcher at the Interdisciplinary Laboratory of Advanced Materials Processing and Simulation (ILAMPS), JUST, under Associate Professor Md. Amzad Hossain. <a href="https://ilamps.pages.dev/home" target="_blank" style="color:var(--accent3);text-decoration:none">ilamps.pages.dev ↗</a></p>
+            <p>Student Researcher at the Interdisciplinary Laboratory of Advanced Materials Processing and Simulation (ILAMPS), JUST, under Associate Professor Md. Amzad Hossain. <a href="https://ilamps.pages.dev/home" target="_blank" rel="noopener">ilamps.pages.dev ↗</a></p>
           </div>
-        </div>
+        </article>
+        <article class="about-card">
+          <div class="card-icon" aria-hidden="true">🏛️</div>
           <div>
-            <!-- UPDATED: Ex-Chair, past tense -->
             <h4>IEEE Technical Leadership</h4>
             <p>Ex-Chair, IEEE SPS JUST SBC (2025); organiser of SigMa Mentorship 2026; Ex-Vice Chair, IEEE JUST SB (2024–2025); Distinguished Judge, SignalQuest 2026.</p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section id="research">
-  <div class="container">
-    <span class="section-tag">Academia</span>
-    <h2 class="section-title">Research &amp; <span>Publications</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     RESEARCH & PUBLICATIONS
+═══════════════════════════════════ -->
+<section id="research" class="section">
+  <div class="inner">
+    <span class="eyebrow">Academia</span>
+    <h2 class="section-title">Research &amp; <em>Publications</em></h2>
+    <div class="section-rule"></div>
     <div class="pub-list">
 
-      <!-- J1: UPDATED venue to Fusion Engineering and Design -->
-      <div class="pub-card reveal">
-        <span class="pub-type">📄 Journal — Under Review</span>
-        <div class="pub-title">[J1] Hydrogen Implantation and Diffusion in BCC Tungsten: A Systematic Molecular Dynamics Study over 5–300 eV and 300–1500 K</div>
-        <div class="pub-meta">Submitted to <em>Fusion Engineering and Design</em> (Q2) · Supervisor: Md. Amzad Hossain · Authors: <strong>Musavvir Haque</strong>, Md. Amzad Hossain</div>
-        <div class="pub-desc">Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten. Uses the Bonny EAM/alloy W–H–He potential in LAMMPS across 1,000 simulations. Identifies non-monotonic retention behaviour, implantation depth saturation, Arrhenius diffusion, and cascade-dominated high-energy regimes relevant to ITER and DEMO.</div>
-        <div class="pub-keywords">
+      <article class="pub-card reveal">
+        <span class="pub-badge">📄 Journal — Under Review</span>
+        <h3 class="pub-title">[J1] Hydrogen Implantation and Diffusion in BCC Tungsten: A Systematic Molecular Dynamics Study over 5–300 eV and 300–1500 K</h3>
+        <p class="pub-meta">Submitted to <em>Fusion Engineering and Design</em> (Q2) &middot; Supervisor: Md. Amzad Hossain &middot; Authors: <strong>Musavvir Haque</strong>, Md. Amzad Hossain</p>
+        <p class="pub-desc">Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten. Uses the Bonny EAM/alloy W–H–He potential in LAMMPS across 1,000 simulations. Identifies non-monotonic retention behaviour, implantation depth saturation, Arrhenius diffusion, and cascade-dominated high-energy regimes relevant to ITER and DEMO.</p>
+        <div class="kw-row">
           <span class="kw">Molecular Dynamics</span><span class="kw">Hydrogen Implantation</span>
           <span class="kw">Tungsten PFM</span><span class="kw">Radiation Damage</span>
           <span class="kw">Fusion Materials</span><span class="kw">LAMMPS</span>
         </div>
-      </div>
+      </article>
 
-      <!-- J2: NEW — Computational Materials Science surrogate -->
-      <div class="pub-card reveal">
-        <span class="pub-type">📄 Journal — Under Revision</span>
-        <div class="pub-title">[J2] Gatekeeper-Constrained Dual-Stage Random Forest Surrogate for Multi-Output Ion Implantation Prediction across Si, SiC, and GaAs</div>
-        <div class="pub-meta">Submitted to <em>Computational Materials Science</em> (Q1) · Authors: Md. A. Hossain, <strong>Musavvir Haque (2nd Author)</strong>, et al.</div>
-        <div class="pub-desc">A novel dual-stage machine learning surrogate incorporating a gatekeeper classifier to constrain prediction scope, enabling rapid and accurate multi-output ion implantation modelling across three semiconductor substrates (Si, SiC, GaAs). Achieves strong predictive performance while maintaining physical interpretability, offering a computationally efficient alternative to Monte Carlo / TRIM simulations.</div>
-        <div class="pub-keywords">
+      <article class="pub-card reveal">
+        <span class="pub-badge">📄 Journal — Under Revision</span>
+        <h3 class="pub-title">[J2] Gatekeeper-Constrained Dual-Stage Random Forest Surrogate for Multi-Output Ion Implantation Prediction across Si, SiC, and GaAs</h3>
+        <p class="pub-meta">Submitted to <em>Computational Materials Science</em> (Q1) &middot; Authors: Md. A. Hossain, <strong>Musavvir Haque (2nd Author)</strong>, et al.</p>
+        <p class="pub-desc">A novel dual-stage machine learning surrogate incorporating a gatekeeper classifier to constrain prediction scope, enabling rapid and accurate multi-output ion implantation modelling across three semiconductor substrates (Si, SiC, GaAs). Achieves strong predictive performance while maintaining physical interpretability, offering a computationally efficient alternative to Monte Carlo / TRIM simulations.</p>
+        <div class="kw-row">
           <span class="kw">Random Forest</span><span class="kw">Ion Implantation</span>
           <span class="kw">Si / SiC / GaAs</span><span class="kw">ML Surrogate</span>
           <span class="kw">Semiconductor</span><span class="kw">Gatekeeper Model</span>
         </div>
-      </div>
+      </article>
 
-      <div class="pub-card reveal">
-        <span class="pub-type">📘 B.Sc. Thesis</span>
-        <div class="pub-title">[T1] Multi-Scale DFT–MD–ML Modelling on Hydrogen Isotope Retention and Oxide Dynamics in Tungsten with Plasma Exposure for Fusion Reactor</div>
-        <div class="pub-meta">B.Sc. Submitted Thesis, JUST · Supervisor: Md. Tariquzzaman, Assistant Professor</div>
-        <div class="pub-desc">Multiscale framework integrating DFT/MD-derived physical trends with machine learning for hydrogen isotope retention and oxide-layer evolution in plasma-exposed tungsten. XGBoost regressor: MAE = 0.017 eV, R² = 0.88 for binding energy; MAE = 0.91%, R² = 0.87 for crack density. Validated against TDS experiments and WEST tokamak observations.</div>
-        <div class="pub-keywords">
+      <article class="pub-card reveal">
+        <span class="pub-badge">📘 B.Sc. Thesis</span>
+        <h3 class="pub-title">[T1] Multi-Scale DFT–MD–ML Modelling on Hydrogen Isotope Retention and Oxide Dynamics in Tungsten with Plasma Exposure for Fusion Reactor</h3>
+        <p class="pub-meta">B.Sc. Submitted Thesis, JUST &middot; Supervisor: Md. Tariquzzaman, Assistant Professor</p>
+        <p class="pub-desc">Multiscale framework integrating DFT/MD-derived physical trends with machine learning for hydrogen isotope retention and oxide-layer evolution in plasma-exposed tungsten. XGBoost regressor: MAE = 0.017 eV, R² = 0.88 for binding energy; MAE = 0.91%, R² = 0.87 for crack density. Validated against TDS experiments and WEST tokamak observations.</p>
+        <div class="kw-row">
           <span class="kw">DFT</span><span class="kw">MD Simulation</span><span class="kw">XGBoost</span>
           <span class="kw">Hydrogen Isotope</span><span class="kw">Tungsten</span><span class="kw">Fusion Reactor</span>
         </div>
-      </div>
+      </article>
 
-      <div class="pub-card reveal">
-        <span class="pub-type">🎤 Conference Paper</span>
-        <div class="pub-title">[C1] Adaptive Multi-Scale VMD with Transfer Entropy for Real-Time Detection of Arrhythmia Transitions in Wearable ECG Devices</div>
-        <div class="pub-meta">5th Int. Conf. Electrical, Computer &amp; Telecommunication Engineering (ICECTE), Rajshahi, 2026 · pp. 1–6</div>
-        <a href="https://doi.org/10.1109/ICECTE69292.2026.11429390" class="pub-link" target="_blank">doi:10.1109/ICECTE69292.2026.11429390 ↗</a>
-      </div>
+      <article class="pub-card reveal">
+        <span class="pub-badge">🎤 Conference Paper</span>
+        <h3 class="pub-title">[C1] Adaptive Multi-Scale VMD with Transfer Entropy for Real-Time Detection of Arrhythmia Transitions in Wearable ECG Devices</h3>
+        <p class="pub-meta">5th Int. Conf. Electrical, Computer &amp; Telecommunication Engineering (ICECTE), Rajshahi, 2026 &middot; pp. 1–6</p>
+        <a href="https://doi.org/10.1109/ICECTE69292.2026.11429390" class="pub-doi" target="_blank" rel="noopener" aria-label="DOI: 10.1109/ICECTE69292.2026.11429390">doi:10.1109/ICECTE69292.2026.11429390</a>
+      </article>
 
-      <div class="pub-card reveal">
-        <span class="pub-type">🎤 Conference Paper</span>
-        <div class="pub-title">[C2] Secure Academic Assessment Using IoT Based Dual Mode Biometric Attendance System for University</div>
-        <div class="pub-meta">2025 Int. Conf. on Quantum Photonics, AI, and Networking (QPAIN), Rangpur, Jul. 2025</div>
-        <a href="https://doi.org/10.1109/QPAIN66474.2025.11171806" class="pub-link" target="_blank">doi:10.1109/QPAIN66474.2025.11171806 ↗</a>
-      </div>
+      <article class="pub-card reveal">
+        <span class="pub-badge">🎤 Conference Paper</span>
+        <h3 class="pub-title">[C2] Secure Academic Assessment Using IoT Based Dual Mode Biometric Attendance System for University</h3>
+        <p class="pub-meta">2025 Int. Conf. on Quantum Photonics, AI, and Networking (QPAIN), Rangpur, Jul. 2025</p>
+        <a href="https://doi.org/10.1109/QPAIN66474.2025.11171806" class="pub-doi" target="_blank" rel="noopener" aria-label="DOI: 10.1109/QPAIN66474.2025.11171806">doi:10.1109/QPAIN66474.2025.11171806</a>
+      </article>
 
-      <div class="pub-card reveal">
-        <span class="pub-type">🎤 Conference Paper — Oral</span>
-        <div class="pub-title">[C3] A DFT Study on Penta-Boron Phosphorus (P-BP₅) Nanosheet for Oxygen-Based Toxic Gases Sensing</div>
-        <div class="pub-meta">2nd Int. Conf. on Engineering and Technology for Sustainable Development (ETSD 2026), Jashore, May 2026 · Paper ID: 136 · Oral Presentation</div>
-        <div class="pub-desc">Co-authors: N. M. Sathi, M. H. Rocky, N. R. Ritu, Md. S. Hossain, I. A. Mim, Md. M. Rahman, A. S. Fahim, Md. R. Khan, Md. A. Hossain</div>
-      </div>
+      <article class="pub-card reveal">
+        <span class="pub-badge">🎤 Conference Paper — Oral</span>
+        <h3 class="pub-title">[C3] A DFT Study on Penta-Boron Phosphorus (P-BP₅) Nanosheet for Oxygen-Based Toxic Gases Sensing</h3>
+        <p class="pub-meta">2nd Int. Conf. on Engineering and Technology for Sustainable Development (ETSD 2026), Jashore, May 2026 &middot; Paper ID: 136 &middot; Oral Presentation</p>
+        <p class="pub-desc">Co-authors: N. M. Sathi, M. H. Rocky, N. R. Ritu, Md. S. Hossain, I. A. Mim, Md. M. Rahman, A. S. Fahim, Md. R. Khan, Md. A. Hossain</p>
+      </article>
 
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <span class="section-tag">Expertise</span>
-    <h2 class="section-title">Technical <span>Skills</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     SKILLS
+═══════════════════════════════════ -->
+<section id="skills" class="section section-alt">
+  <div class="inner">
+    <span class="eyebrow">Expertise</span>
+    <h2 class="section-title">Technical <em>Skills</em></h2>
+    <div class="section-rule"></div>
     <div class="skills-grid reveal">
-      <!-- UPDATED: added GPAW, ASE, pymatgen -->
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">💻</span><h4>Computational &amp; Simulation</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">💻</span>
+          <h3>Computational &amp; Simulation</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">LAMMPS</span><span class="pill">GPAW</span><span class="pill">ASE</span>
           <span class="pill">pymatgen</span><span class="pill">PVsyst</span><span class="pill">Proteus</span>
           <span class="pill">ModelSim</span><span class="pill">SOLIDWORKS</span><span class="pill">TIA Portal</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">🧠</span><h4>Machine Learning &amp; Data</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">🧠</span>
+          <h3>Machine Learning &amp; Data</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">XGBoost</span><span class="pill">Random Forest</span><span class="pill">Python</span>
           <span class="pill">MATLAB</span><span class="pill">ML Pipelines</span><span class="pill">Scikit-learn</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">📡</span><h4>Signal Processing</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">📡</span>
+          <h3>Signal Processing</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">VMD</span><span class="pill">Transfer Entropy</span><span class="pill">ECG Analysis</span>
           <span class="pill">Wearable Biosensors</span><span class="pill">Real-Time DSP</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">🔌</span><h4>Hardware &amp; Embedded</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">🔌</span>
+          <h3>Hardware &amp; Embedded</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">IoT Systems</span><span class="pill">ESP32/8266</span><span class="pill">Arduino</span>
           <span class="pill">PCB Design</span><span class="pill">PLC Programming</span><span class="pill">Sensor Interfacing</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">⚡</span><h4>VLSI &amp; IC Design</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">⚡</span>
+          <h3>VLSI &amp; IC Design</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">VLSI</span><span class="pill">ASIC</span><span class="pill">Analog Circuit Design</span>
           <span class="pill">PNR</span><span class="pill">Cadence</span><span class="pill">ModelSim</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-header"><span class="skill-icon">🌱</span><h4>Power &amp; Energy</h4></div>
-        <div class="skill-pills">
+        <div class="skill-head">
+          <span class="skill-icon" aria-hidden="true">🌱</span>
+          <h3>Power &amp; Energy</h3>
+        </div>
+        <div class="pill-row">
           <span class="pill">Energy Audits</span><span class="pill">Solar PV</span><span class="pill">PVsyst</span>
           <span class="pill">Power Plants</span><span class="pill">Renewable Energy</span>
         </div>
@@ -771,286 +1130,294 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <span class="section-tag">Work</span>
-    <h2 class="section-title">Selected <span>Projects</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     PROJECTS
+═══════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="inner">
+    <span class="eyebrow">Work</span>
+    <h2 class="section-title">Selected <em>Projects</em></h2>
+    <div class="section-rule"></div>
     <div class="projects-grid">
 
-      <div class="project-card reveal">
-        <div class="project-date">Aug–Dec 2024</div>
+      <article class="project-card reveal">
+        <p class="project-date">Aug–Dec 2024</p>
         <h3>Sustainable IoT-Based Biometric Attendance &amp; Course Management System</h3>
         <p>ESP32 + Supabase cloud biometric attendance system with AES-256 encryption, role-based access control, offline sync, and mark computation based on JUST's 28-mark academic model.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">May 2025 – Present</div>
+      <article class="project-card reveal">
+        <p class="project-date">May 2025 – Present</p>
         <h3>Energy Audit for Saleha Metal Industries Limited</h3>
         <p>Comprehensive audit of 5.1M kWh annual consumption; 400 kVA transformer analysis, synchronisation of 430 kVA &amp; 670 kVA transformers, and renewable integration recommendations.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Apr 2025</div>
+      <article class="project-card reveal">
+        <p class="project-date">Apr 2025</p>
         <h3>Walk-Through Energy Audit — Bangladesh Cable Shilpa Ltd.</h3>
         <p>Analysed 34,792 kWh consumption; identified savings via LED lighting (50%), BLDC fans (53.8%), and a 1 MW solar plant to replace diesel generators.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Jun 2025</div>
+      <article class="project-card reveal">
+        <p class="project-date">Jun 2025</p>
         <h3>Adaptive Cruise Control — Miniature Car</h3>
         <p>Arduino-based PID control prototype for safe following distance using ultrasonic sensors, encoder speed sensing, and optional IR-sensor lane-keeping.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Jul 2025</div>
+      <article class="project-card reveal">
+        <p class="project-date">Jul 2025</p>
         <h3>Dual-Mode Motor Control — Siemens PLC</h3>
         <p>Siemens S7-1200 motor control via PC HMI and manual switch, programmed in TIA Portal with ladder logic.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Apr–May 2024</div>
+      <article class="project-card reveal">
+        <p class="project-date">Apr–May 2024</p>
         <h3>Smart Home Automation — Blynk &amp; Google Assistant</h3>
         <p>ESP8266 + relays for lights/fans controlled via Blynk app and Google Assistant voice commands with IFTTT integration.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Oct 2024</div>
+      <article class="project-card reveal">
+        <p class="project-date">Oct 2024</p>
         <h3>Line Follower Robot (LFR)</h3>
         <p>IR-sensor LFR with L298N motor driver; real-time path detection and motor control in Embedded C / Arduino IDE.</p>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-date">Aug 2025</div>
+      <article class="project-card reveal">
+        <p class="project-date">Aug 2025</p>
         <h3>Short Circuit Protection System</h3>
         <p>Designed protection mechanism for switchgear: fault detection, protective relays, and circuit interrupters for power distribution safety.</p>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<!-- AWARDS -->
-<section id="awards">
-  <div class="container">
-    <span class="section-tag">Recognition</span>
-    <h2 class="section-title">Honors &amp; <span>Awards</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     AWARDS
+═══════════════════════════════════ -->
+<section id="awards" class="section section-alt">
+  <div class="inner">
+    <span class="eyebrow">Recognition</span>
+    <h2 class="section-title">Honors &amp; <em>Awards</em></h2>
+    <div class="section-rule"></div>
     <div class="awards-list">
-      <div class="award-card reveal">
-        <div class="award-medal">🥇</div>
+      <article class="award-card reveal">
+        <div class="award-icon" aria-hidden="true">🥇</div>
         <div>
-          <h4>1st Place — Best Paper Presentation</h4>
+          <h3>1st Place — Best Paper Presentation</h3>
           <p>2nd Int. Conf. on Engineering and Technology for Sustainable Development (ETSD 2026), JUST, May 2026 — for "Integrated DFT–MD–ML Multiscale Modelling of Hydrogen Isotope Trapping and Oxide Evolution in Tungsten under Fusion-Relevant Plasma Exposure"</p>
         </div>
-      </div>
-      <div class="award-card reveal">
-        <div class="award-medal">🥇</div>
+      </article>
+      <article class="award-card reveal">
+        <div class="award-icon" aria-hidden="true">🥇</div>
         <div>
-          <h4>1st Place — Best Poster Presentation</h4>
+          <h3>1st Place — Best Poster Presentation</h3>
           <p>Sustainable IoT-Based Biometric Attendance System Poster Presentation, Jashore University of Science and Technology, May 2025</p>
         </div>
-      </div>
-      <div class="award-card reveal">
-        <div class="award-medal">🏅</div>
+      </article>
+      <article class="award-card reveal">
+        <div class="award-icon" aria-hidden="true">🏅</div>
         <div>
-          <h4>4th Runner-Up — IEEE Bangladesh Section SYW Idea Pitching 2025</h4>
+          <h3>4th Runner-Up — IEEE Bangladesh Section SYW Idea Pitching 2025</h3>
           <p>IEEE Bangladesh Section competitive idea pitching competition among student branches nationwide.</p>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <span class="section-tag">Journey</span>
-    <h2 class="section-title">Experience &amp; <span>Leadership</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     EXPERIENCE & LEADERSHIP
+═══════════════════════════════════ -->
+<section id="experience" class="section">
+  <div class="inner">
+    <span class="eyebrow">Journey</span>
+    <h2 class="section-title">Experience &amp; <em>Leadership</em></h2>
+    <div class="section-rule"></div>
     <div class="timeline reveal">
 
-      <div class="timeline-item">
-        <div class="timeline-date">2024 – Present</div>
-        <div class="timeline-title">Student Researcher — ILAMPS</div>
-        <div class="timeline-org"><a href="https://ilamps.pages.dev/home" target="_blank" style="color:var(--accent3);text-decoration:none">Interdisciplinary Laboratory of Advanced Materials Processing and Simulation (ILAMPS)</a>, JUST</div>
-        <div class="timeline-desc">Conducting research in computational materials science under Associate Professor Md. Amzad Hossain. Core work spans large-scale MD simulation of plasma–material interactions in BCC tungsten (LAMMPS), ML surrogate modelling for ion implantation, and DFT-based gas sensing studies using GPAW, ASE, and pymatgen.</div>
+      <div class="tl-item">
+        <p class="tl-date">2024 – Present</p>
+        <h3 class="tl-title">Student Researcher — ILAMPS</h3>
+        <p class="tl-org"><a href="https://ilamps.pages.dev/home" target="_blank" rel="noopener">Interdisciplinary Laboratory of Advanced Materials Processing and Simulation (ILAMPS)</a>, JUST</p>
+        <p class="tl-desc">Conducting research in computational materials science under Associate Professor Md. Amzad Hossain. Core work spans large-scale MD simulation of plasma–material interactions in BCC tungsten (LAMMPS), ML surrogate modelling for ion implantation, and DFT-based gas sensing studies using GPAW, ASE, and pymatgen.</p>
       </div>
 
-      <!-- UPDATED: Ex-Chair -->
-      <div class="timeline-item">
-        <div class="timeline-date">Sep 2025 – Jun 2026</div>
-        <div class="timeline-title">Ex-Chair, IEEE Signal Processing Society JUST SBC</div>
-        <div class="timeline-org">IEEE SPS JUST Student Branch Chapter, Jashore</div>
-        <div class="timeline-desc">Elected Chapter Chair; led technical events, workshops, and mentorship in signal processing. Organised the SigMa Mentorship Programme 2026 for undergraduate researchers.</div>
+      <div class="tl-item">
+        <p class="tl-date">Sep 2025 – Jun 2026</p>
+        <h3 class="tl-title">Ex-Chair, IEEE Signal Processing Society JUST SBC</h3>
+        <p class="tl-org">IEEE SPS JUST Student Branch Chapter, Jashore</p>
+        <p class="tl-desc">Elected Chapter Chair; led technical events, workshops, and mentorship in signal processing. Organised the SigMa Mentorship Programme 2026 for undergraduate researchers.</p>
       </div>
 
-      <!-- NEW: Distinguished Judge -->
-      <div class="timeline-item">
-        <div class="timeline-date">2026</div>
-        <div class="timeline-title">Distinguished Judge — SignalQuest 2026</div>
-        <div class="timeline-org">IEEE SPS JUST SBC · IEEE SPS Day</div>
-        <div class="timeline-desc">Served as Distinguished Judge at SignalQuest 2026, an IEEE Signal Processing Society Day competition organised by the JUST Student Branch Chapter, evaluating signal processing research projects from undergraduate participants.</div>
+      <div class="tl-item">
+        <p class="tl-date">2026</p>
+        <h3 class="tl-title">Distinguished Judge — SignalQuest 2026</h3>
+        <p class="tl-org">IEEE SPS JUST SBC &middot; IEEE SPS Day</p>
+        <p class="tl-desc">Served as Distinguished Judge at SignalQuest 2026, an IEEE Signal Processing Society Day competition organised by the JUST Student Branch Chapter, evaluating signal processing research projects from undergraduate participants.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Apr 2024 – Sep 2025</div>
-        <div class="timeline-title">Vice Chair (Technical), IEEE JUST Student Branch</div>
-        <div class="timeline-org">IEEE JUST SB, Jashore</div>
-        <div class="timeline-desc">Organised workshops, seminars, and conferences; promoted technical skills and leadership across EEE, CS, and related disciplines.</div>
+      <div class="tl-item">
+        <p class="tl-date">Apr 2024 – Sep 2025</p>
+        <h3 class="tl-title">Vice Chair (Technical), IEEE JUST Student Branch</h3>
+        <p class="tl-org">IEEE JUST SB, Jashore</p>
+        <p class="tl-desc">Organised workshops, seminars, and conferences; promoted technical skills and leadership across EEE, CS, and related disciplines.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">May 2025</div>
-        <div class="timeline-title">Internship Trainee — Analog IC Design</div>
-        <div class="timeline-org">Ulkasemi Ltd.</div>
-        <div class="timeline-desc">Training on Analog IC Design, Layout Techniques, and Verification Flows; exposure to industry chip design workflows using VLSI, Cadence toolchain, and ModelSim.</div>
+      <div class="tl-item">
+        <p class="tl-date">May 2025</p>
+        <h3 class="tl-title">Internship Trainee — Analog IC Design</h3>
+        <p class="tl-org">Ulkasemi Ltd.</p>
+        <p class="tl-desc">Training on Analog IC Design, Layout Techniques, and Verification Flows; exposure to industry chip design workflows using VLSI, Cadence toolchain, and ModelSim.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Jun 2025</div>
-        <div class="timeline-title">Guest Speaker — Physical Design (PNR)</div>
-        <div class="timeline-org">EEE Club JUST</div>
-        <div class="timeline-desc">Delivered seminar on Placement &amp; Routing after industrial training at Ulkasemi Ltd.; covered PNR basics, EDA tools, and semiconductor career pathways.</div>
+      <div class="tl-item">
+        <p class="tl-date">Jun 2025</p>
+        <h3 class="tl-title">Guest Speaker — Physical Design (PNR)</h3>
+        <p class="tl-org">EEE Club JUST</p>
+        <p class="tl-desc">Delivered seminar on Placement &amp; Routing after industrial training at Ulkasemi Ltd.; covered PNR basics, EDA tools, and semiconductor career pathways.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Dec 2025</div>
-        <div class="timeline-title">Speaker — Embedded AI / Speech &amp; Audio Processing</div>
-        <div class="timeline-org">IEEE SPS DeKUT Student Branch Chapter (Webinar)</div>
-        <div class="timeline-desc">Delivered webinar on embedded AI, speech, and audio processing for next-generation wearable devices. Organised by IEEE SPS DeKUT SBC in collaboration with IEEE CAS &amp; IEEE DeKUT SB.</div>
+      <div class="tl-item">
+        <p class="tl-date">Dec 2025</p>
+        <h3 class="tl-title">Speaker — Embedded AI / Speech &amp; Audio Processing</h3>
+        <p class="tl-org">IEEE SPS DeKUT Student Branch Chapter (Webinar)</p>
+        <p class="tl-desc">Delivered webinar on embedded AI, speech, and audio processing for next-generation wearable devices. Organised by IEEE SPS DeKUT SBC in collaboration with IEEE CAS &amp; IEEE DeKUT SB.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Jan 2026</div>
-        <div class="timeline-title">Solar Training: PV Technology &amp; System Design</div>
-        <div class="timeline-org">Daffodil International University (1 Month)</div>
-        <div class="timeline-desc">Renewable energy, emissions control, solar PV technology in Bangladesh; PVsyst simulation, economic analysis, O&amp;M. Credential ID: RE26312.</div>
+      <div class="tl-item">
+        <p class="tl-date">Jan 2026</p>
+        <h3 class="tl-title">Solar Training: PV Technology &amp; System Design</h3>
+        <p class="tl-org">Daffodil International University (1 Month)</p>
+        <p class="tl-desc">Renewable energy, emissions control, solar PV technology in Bangladesh; PVsyst simulation, economic analysis, O&amp;M. Credential ID: RE26312.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Jun–Jul 2025</div>
-        <div class="timeline-title">Professional Training — Electrical Engineering &amp; Instrumentation</div>
-        <div class="timeline-org">TICI</div>
-        <div class="timeline-desc">Hands-on: industrial sensors, PLC-based automation, and electrical safety standards.</div>
+      <div class="tl-item">
+        <p class="tl-date">Jun–Jul 2025</p>
+        <h3 class="tl-title">Professional Training — Electrical Engineering &amp; Instrumentation</h3>
+        <p class="tl-org">TICI</p>
+        <p class="tl-desc">Hands-on: industrial sensors, PLC-based automation, and electrical safety standards.</p>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">Apr 2023 – Jan 2024</div>
-        <div class="timeline-title">Webmaster, IEEE JUST Student Branch</div>
-        <div class="timeline-org">IEEE JUST SB</div>
-        <div class="timeline-desc">Designed and maintained the IEEE JUST SB official website.</div>
+      <div class="tl-item">
+        <p class="tl-date">Apr 2023 – Jan 2024</p>
+        <h3 class="tl-title">Webmaster, IEEE JUST Student Branch</h3>
+        <p class="tl-org">IEEE JUST SB</p>
+        <p class="tl-desc">Designed and maintained the IEEE JUST SB official website.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="container">
-    <span class="section-tag">Credentials</span>
-    <h2 class="section-title">Certifications &amp; <span>Memberships</span></h2>
-    <div class="section-line"></div>
+<!-- ═══════════════════════════════════
+     CERTIFICATIONS
+═══════════════════════════════════ -->
+<section id="certifications" class="section section-alt">
+  <div class="inner">
+    <span class="eyebrow">Credentials</span>
+    <h2 class="section-title">Certifications &amp; <em>Memberships</em></h2>
+    <div class="section-rule"></div>
     <div class="cert-grid reveal">
       <div class="cert-card">
         <strong>EF SET English — C2 Proficient</strong>
-        <span>Score: 82/100 · Feb 2026</span><br>
-        <a href="https://cert.efset.org/C2S2MJ" class="cert-link" target="_blank">cert.efset.org/C2S2MJ ↗</a>
+        <span>Score: 82/100 &middot; Feb 2026</span>
+        <a href="https://cert.efset.org/C2S2MJ" target="_blank" rel="noopener">cert.efset.org/C2S2MJ ↗</a>
       </div>
       <div class="cert-card">
         <strong>Machine Learning With Python</strong>
-        <span>Bangladesh Computer Council (EDGE Project), JUST · Sep 2025</span>
+        <span>Bangladesh Computer Council (EDGE Project), JUST &middot; Sep 2025</span>
       </div>
       <div class="cert-card">
         <strong>IEEE Signal Processing Society</strong>
-        <span>IEEE Member · 2025</span>
+        <span>IEEE Member &middot; 2025</span>
       </div>
       <div class="cert-card">
         <strong>IEEE Power and Energy Society</strong>
-        <span>IEEE Member · 2025</span>
+        <span>IEEE Member &middot; 2025</span>
       </div>
       <div class="cert-card">
         <strong>Industrial Training — Electrical &amp; Instrumentation</strong>
-        <span>TICI · Jul 2025 · PLC Programming</span>
+        <span>TICI &middot; Jul 2025 &middot; PLC Programming</span>
       </div>
       <div class="cert-card">
         <strong>PCB Design Training</strong>
-        <span>Conducted by Walton Engineer, JUST · May 2025</span>
+        <span>Conducted by Walton Engineer, JUST &middot; May 2025</span>
       </div>
       <div class="cert-card">
         <strong>IEEE QPAIN 2025 Research Presentation</strong>
-        <span>IEEE Photonics Society Bangladesh Chapter · Aug 2025</span>
+        <span>IEEE Photonics Society Bangladesh Chapter &middot; Aug 2025</span>
       </div>
       <div class="cert-card">
         <strong>SOLIDWORKS Associate (CSWA) Course</strong>
-        <span>Udemy · Jul 2023</span>
+        <span>Udemy &middot; Jul 2023</span>
       </div>
       <div class="cert-card">
         <strong>Introduction to IoT</strong>
-        <span>Cisco · Jul 2023</span>
+        <span>Cisco &middot; Jul 2023</span>
       </div>
       <div class="cert-card">
         <strong>Certificate of Appreciation — Arduino &amp; LFR Workshop</strong>
-        <span>EEE Club JUST · Aug 2025</span>
+        <span>EEE Club JUST &middot; Aug 2025</span>
       </div>
       <div class="cert-card">
         <strong>Speaker — LinkedIn &amp; CV Writing Webinar</strong>
-        <span>IEEE SPS JUST SBC &amp; IEEE JUST SB · Oct 2025</span>
+        <span>IEEE SPS JUST SBC &amp; IEEE JUST SB &middot; Oct 2025</span>
       </div>
       <div class="cert-card">
         <strong>Speaker — SigMa Mentorship Program 2026</strong>
-        <span>IEEE SPS JUST SBC · Oct 2025</span>
+        <span>IEEE SPS JUST SBC &middot; Oct 2025</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <span class="section-tag">Let's Connect</span>
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <div class="section-line" style="margin: 0.6rem auto 2rem"></div>
+<!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="inner">
+    <div class="contact-wrap">
+      <span class="eyebrow">Let's Connect</span>
+      <h2 class="section-title">Get In <em>Touch</em></h2>
+      <div class="section-rule" style="margin: 0.6rem auto 2rem"></div>
       <p>Open to PhD opportunities, research collaborations, and academic discussions in computational materials science, ML for physics, and signal processing.</p>
-      <div class="contact-links">
-        <a href="mailto:musavvirhaquepial@gmail.com" class="contact-btn primary-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      <div class="contact-btns">
+        <a href="mailto:musavvirhaquepial@gmail.com" class="contact-btn primary" aria-label="Send email to Musavvir Haque">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           Email Me
         </a>
-        <a href="https://www.linkedin.com/in/musavvir-haque-897463253/" class="contact-btn" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="https://www.linkedin.com/in/musavvir-haque-897463253/" class="contact-btn" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="#research" class="contact-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          View Publications
+        <a href="#research" class="contact-btn" aria-label="View publications">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Publications
         </a>
-        <a href="https://scholar.google.com/citations?user=Cy5MITkAAAAJ&hl=en" class="contact-btn" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h3.5V22h5v-7h7v7h5V9.5H24z"/></svg>
+        <a href="https://scholar.google.com/citations?user=Cy5MITkAAAAJ&hl=en" class="contact-btn" target="_blank" rel="noopener" aria-label="Google Scholar profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h3.5V22h5v-7h7v7h5V9.5H24z"/></svg>
           Google Scholar
         </a>
-        <a href="https://orcid.org/0009-0008-0521-3474" class="contact-btn" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.284-3.722-3.872-3.722h-2.297z"/></svg>
+        <a href="https://orcid.org/0009-0008-0521-3474" class="contact-btn" target="_blank" rel="noopener" aria-label="ORCID profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.284-3.722-3.872-3.722h-2.297z"/></svg>
           ORCID
         </a>
       </div>
 
-      <div class="refs-grid">
+      <div class="refs-grid" aria-label="Academic references">
         <div class="ref-card">
-          <h4>Md. Amzad Hossain</h4>
+          <h3>Md. Amzad Hossain</h3>
           <p>Associate Professor<br>Dept. of EEE, JUST</p>
           <a href="mailto:ma.hossain@just.edu.bd">ma.hossain@just.edu.bd</a>
         </div>
         <div class="ref-card">
-          <h4>Prof. Dr. Imran Khan</h4>
+          <h3>Prof. Dr. Imran Khan</h3>
           <p>Dean (In-Charge) &amp; Professor<br>Dept. of EEE, JUST</p>
           <a href="mailto:i.khan@just.edu.bd">i.khan@just.edu.bd</a>
         </div>
         <div class="ref-card">
-          <h4>Md. Tariquzzaman</h4>
+          <h3>Md. Tariquzzaman</h3>
           <p>Assistant Professor<br>Dept. of EEE, JUST</p>
           <a href="mailto:tariquzzaman@just.edu.bd">tariquzzaman@just.edu.bd</a>
         </div>
@@ -1059,43 +1426,74 @@
   </div>
 </section>
 
-<!-- UPDATED: footer year 2026 -->
-<footer>
-  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> · Jessore, Bangladesh · 2026</p>
-  <p style="margin-top:0.4rem">EEE Researcher · Ex-IEEE SPS Chapter Chair · <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer role="contentinfo">
+  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> &middot; Jessore, Bangladesh &middot; 2026</p>
+  <p>EEE Researcher &middot; Ex-IEEE SPS Chapter Chair &middot; <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
 </footer>
 
+<!-- BACK TO TOP -->
+<button id="back-top" aria-label="Back to top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
 <script>
-  /* ── MOBILE NAV ── */
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
+/* ── MOBILE NAV ── */
+function toggleMenu(btn) {
+  const nav = document.getElementById('mobileNav');
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+function closeMobile() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+}
 
-  /* ── SCROLL REVEAL ── */
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        e.target.style.transitionDelay = (i * 0.06) + 's';
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => io.observe(el));
+/* ── SCROLL HANDLERS ── */
+const progressBar = document.getElementById('progress-bar');
+const backTop     = document.getElementById('back-top');
+const navEl       = document.getElementById('nav');
+const sections    = document.querySelectorAll('section[id], header[id]');
+const navLinks    = document.querySelectorAll('.nav-links a');
 
-  /* ── ACTIVE NAV ── */
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent3)' : '';
-    });
-  }, { passive: true });
+window.addEventListener('scroll', () => {
+  const st = window.scrollY;
+  const dh = document.documentElement.scrollHeight - window.innerHeight;
+
+  /* progress bar */
+  progressBar.style.width = (dh > 0 ? (st / dh * 100) : 0) + '%';
+
+  /* back-to-top */
+  backTop.classList.toggle('visible', st > 500);
+
+  /* nav shadow */
+  navEl.classList.toggle('scrolled', st > 10);
+
+  /* active nav link */
+  let current = '';
+  sections.forEach(s => { if (st >= s.offsetTop - 80) current = s.getAttribute('id'); });
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href').slice(1);
+    a.classList.toggle('active', href === current);
+  });
+}, { passive: true });
+
+/* ── SCROLL REVEAL ── */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 55);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+revealEls.forEach(el => io.observe(el));
 </script>
 </body>
 </html>
