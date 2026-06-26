@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+(function(){
+  var t=localStorage.getItem('mh-theme');
+  if(!t) t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>404 — Page Not Found | Musavvir Haque</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root, [data-theme="dark"] {
+  --ink: #090d18;
+  --plasma-hi: #818cf8;
+  --plasma-btn: #5457e0;
+  --text: #e2e8f0;
+  --text-head: #ffffff;
+  --muted: #8899b4;
+  --border-2: rgba(255,255,255,0.06);
+  --plasma-lo: rgba(99,102,241,0.12);
+}
+[data-theme="light"] {
+  --ink: #f8fafc;
+  --plasma-hi: #4f46e5;
+  --plasma-btn: #4338ca;
+  --text: #1e293b;
+  --text-head: #0f172a;
+  --muted: #556070;
+  --border-2: rgba(15,23,42,0.10);
+  --plasma-lo: rgba(79,70,229,0.09);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.wrap { max-width: 480px; }
+.code {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: var(--plasma-hi);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+h1 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-head);
+  margin-bottom: 0.8rem;
+}
+p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  background: var(--plasma-btn);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 0 28px rgba(99,102,241,0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover { background: var(--plasma-hi); transform: translateY(-2px); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or may have moved. Let's get you back on track.</p>
+    <a href="/" class="btn">← Back to Home</a>
+  </div>
+</body>
+</html>
