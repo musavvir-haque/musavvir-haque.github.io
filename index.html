@@ -225,13 +225,6 @@
   }
   .photo-frame:hover img { transform: scale(1.03); }
 
-  .photo-placeholder {
-    width: 100%; height: 100%;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    background: var(--bg2);
-  }
-
   /* decorative corner lines */
   .photo-frame::before, .photo-frame::after {
     content: '';
@@ -554,7 +547,8 @@
         Musavvir<br>
         <span class="hero-title-accent">Haque</span>
       </h1>
-      <p class="hero-sub">EEE Researcher · IEEE SPS Chapter Chair · Computational Materials Scientist &amp; ML Engineer | Jashore University of Science &amp; Technology</p>
+      <!-- UPDATED: graduated, ex-chair -->
+      <p class="hero-sub">EEE Graduate · Ex-IEEE SPS Chapter Chair · Computational Materials Scientist &amp; ML Engineer | Jashore University of Science &amp; Technology</p>
       <div class="hero-tags">
         <span class="tag">Fusion Materials</span>
         <span class="tag">Molecular Dynamics</span>
@@ -567,15 +561,15 @@
         <a href="#research" class="btn-primary">View Research</a>
         <a href="mailto:musavvirhaquepial@gmail.com" class="btn-outline">Get In Touch</a>
       </div>
+      <!-- UPDATED: 6+ publications, 2 under review -->
       <div class="hero-stat-row">
-        <div class="hero-stat"><div class="num">4+</div><div class="lbl">Publications</div></div>
-        <div class="hero-stat"><div class="num">3</div><div class="lbl">Awards</div></div>
-        <div class="hero-stat"><div class="num">3.47</div><div class="lbl">CGPA</div></div>
+        <div class="hero-stat"><div class="num">6+</div><div class="lbl">Publications</div></div>
         <div class="hero-stat"><div class="num">2</div><div class="lbl">Under Review</div></div>
+        <div class="hero-stat"><div class="num">3.47</div><div class="lbl">CGPA</div></div>
+        <div class="hero-stat"><div class="num">3</div><div class="lbl">Awards</div></div>
       </div>
     </div>
 
-    <!-- PHOTO — no upload, just displays if src loads, blank if not -->
     <div class="hero-photo">
       <div class="photo-frame">
         <img id="hero-img"
@@ -595,14 +589,17 @@
     <div class="section-line"></div>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>I am an aspiring PhD researcher and final-year B.Sc. student in Electrical and Electronic Engineering at Jashore University of Science and Technology (JUST), Bangladesh. My research bridges computational materials science, machine learning, and signal processing.</p>
+        <!-- UPDATED: graduate, not final-year student -->
+        <p>I am an aspiring PhD researcher and B.Sc. graduate (2026) in Electrical and Electronic Engineering from Jashore University of Science and Technology (JUST), Bangladesh. My research bridges computational materials science, machine learning, and signal processing.</p>
         <p>My primary focus is on plasma–material interactions in fusion-relevant tungsten, ML-accelerated materials modelling (DFT/MD surrogates), ion implantation physics in semiconductor substrates, and real-time wearable biosignal processing using advanced signal decomposition.</p>
-        <p>Beyond research, I serve as Chair of the IEEE Signal Processing Society JUST Student Branch Chapter, where I organise technical events, mentorship programmes, and workshops fostering undergraduate research culture.</p>
+        <p>Beyond research, I served as Chair of the IEEE Signal Processing Society JUST Student Branch Chapter, where I organised technical events, the SigMa Mentorship Programme 2026, and workshops fostering undergraduate research culture.</p>
         <div class="about-info">
           <div class="info-row"><span class="info-label">Location</span><span class="info-value">Jessore, Khulna, Bangladesh</span></div>
-          <div class="info-row"><span class="info-label">Degree</span><span class="info-value">B.Sc. EEE, JUST (2022–2026)</span></div>
+          <!-- UPDATED: graduated -->
+          <div class="info-row"><span class="info-label">Degree</span><span class="info-value">B.Sc. EEE, JUST (2022–2026) — Graduated</span></div>
           <div class="info-row"><span class="info-label">CGPA</span><span class="info-value">3.47 / 4.00</span></div>
-          <div class="info-row"><span class="info-label">IEEE Role</span><span class="info-value">Chair, IEEE SPS JUST SBC 2025</span></div>
+          <!-- UPDATED: Ex-Chair -->
+          <div class="info-row"><span class="info-label">IEEE Role</span><span class="info-value">Ex-Chair, IEEE SPS JUST SBC (2025)</span></div>
           <div class="info-row"><span class="info-label">English</span><span class="info-value">C2 Proficient — EF SET 82/100</span></div>
           <div class="info-row"><span class="info-label">Email</span><span class="info-value"><a href="mailto:musavvirhaquepial@gmail.com" style="color:var(--accent3);text-decoration:none">musavvirhaquepial@gmail.com</a></span></div>
         </div>
@@ -612,28 +609,29 @@
           <div class="about-card-icon">⚛️</div>
           <div>
             <h4>Computational Materials Science</h4>
-            <p>Large-scale MD simulation using LAMMPS; fusion-relevant plasma–material interactions in BCC tungsten across energy and temperature space.</p>
+            <p>Large-scale MD simulation using LAMMPS; DFT calculations with GPAW/VASP; fusion-relevant plasma–material interactions in BCC tungsten across energy and temperature space.</p>
           </div>
         </div>
         <div class="about-card">
           <div class="about-card-icon">🤖</div>
           <div>
             <h4>Machine Learning for Physics</h4>
-            <p>XGBoost & Random Forest ML surrogates for DFT/MD predictions; ion implantation modelling in semiconductor substrates.</p>
+            <p>XGBoost &amp; Random Forest ML surrogates for DFT/MD predictions; ion implantation modelling in Si, SiC, and GaAs semiconductor substrates.</p>
           </div>
         </div>
         <div class="about-card">
           <div class="about-card-icon">📡</div>
           <div>
-            <h4>Signal Processing & Wearables</h4>
+            <h4>Signal Processing &amp; Wearables</h4>
             <p>Adaptive VMD with transfer entropy for real-time ECG arrhythmia detection; embedded AI for next-gen wearable devices.</p>
           </div>
         </div>
         <div class="about-card">
           <div class="about-card-icon">🏛️</div>
           <div>
+            <!-- UPDATED: Ex-Chair, past tense -->
             <h4>IEEE Technical Leadership</h4>
-            <p>Chair, IEEE SPS JUST SBC 2025; organiser of SigMa Mentorship 2026; ex-Vice Chair, IEEE JUST SB (2024–2025).</p>
+            <p>Ex-Chair, IEEE SPS JUST SBC (2025); organiser of SigMa Mentorship 2026; Ex-Vice Chair, IEEE JUST SB (2024–2025); Distinguished Judge, SignalQuest 2026.</p>
           </div>
         </div>
       </div>
@@ -649,15 +647,29 @@
     <div class="section-line"></div>
     <div class="pub-list">
 
+      <!-- J1: UPDATED venue to Fusion Engineering and Design -->
       <div class="pub-card reveal">
         <span class="pub-type">📄 Journal — Under Review</span>
         <div class="pub-title">[J1] Hydrogen Implantation and Diffusion in BCC Tungsten: A Systematic Molecular Dynamics Study over 5–300 eV and 300–1500 K</div>
-        <div class="pub-meta">Submitted to peer-reviewed journal · Supervisor: Md. Amzad Hossain · Authors: <strong>Musavvir Haque</strong>, Md. Amzad Hossain</div>
-        <div class="pub-desc">Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten. Uses the Bonny EAM/alloy W–H–He potential in LAMMPS. Identifies non-monotonic retention behaviour, implantation depth saturation, Arrhenius diffusion, and cascade-dominated high-energy regimes relevant to ITER and DEMO.</div>
+        <div class="pub-meta">Submitted to <em>Fusion Engineering and Design</em> (Q2) · Supervisor: Md. Amzad Hossain · Authors: <strong>Musavvir Haque</strong>, Md. Amzad Hossain</div>
+        <div class="pub-desc">Large-scale classical MD investigation of hydrogen implantation, retention, diffusion, and radiation damage in plasma-exposed BCC tungsten. Uses the Bonny EAM/alloy W–H–He potential in LAMMPS across 1,000 simulations. Identifies non-monotonic retention behaviour, implantation depth saturation, Arrhenius diffusion, and cascade-dominated high-energy regimes relevant to ITER and DEMO.</div>
         <div class="pub-keywords">
           <span class="kw">Molecular Dynamics</span><span class="kw">Hydrogen Implantation</span>
           <span class="kw">Tungsten PFM</span><span class="kw">Radiation Damage</span>
           <span class="kw">Fusion Materials</span><span class="kw">LAMMPS</span>
+        </div>
+      </div>
+
+      <!-- J2: NEW — Computational Materials Science surrogate -->
+      <div class="pub-card reveal">
+        <span class="pub-type">📄 Journal — Under Revision</span>
+        <div class="pub-title">[J2] Gatekeeper-Constrained Dual-Stage Random Forest Surrogate for Multi-Output Ion Implantation Prediction across Si, SiC, and GaAs</div>
+        <div class="pub-meta">Submitted to <em>Computational Materials Science</em> (Q1) · Authors: Md. A. Hossain, <strong>Musavvir Haque</strong>, et al.</div>
+        <div class="pub-desc">A novel dual-stage machine learning surrogate incorporating a gatekeeper classifier to constrain prediction scope, enabling rapid and accurate multi-output ion implantation modelling across three semiconductor substrates (Si, SiC, GaAs). Achieves strong predictive performance while maintaining physical interpretability, offering a computationally efficient alternative to Monte Carlo / TRIM simulations.</div>
+        <div class="pub-keywords">
+          <span class="kw">Random Forest</span><span class="kw">Ion Implantation</span>
+          <span class="kw">Si / SiC / GaAs</span><span class="kw">ML Surrogate</span>
+          <span class="kw">Semiconductor</span><span class="kw">Gatekeeper Model</span>
         </div>
       </div>
 
@@ -693,13 +705,6 @@
         <div class="pub-desc">Co-authors: N. M. Sathi, M. H. Rocky, N. R. Ritu, Md. S. Hossain, I. A. Mim, Md. M. Rahman, A. S. Fahim, Md. R. Khan, Md. A. Hossain</div>
       </div>
 
-      <div class="pub-card reveal">
-        <span class="pub-type">🎤 Conference Paper — Accepted</span>
-        <div class="pub-title">[C4] A Validated ML Surrogate for Rapid Forward and Reverse Ion Implantation Modeling in GaAs Substrates for Plasma-Based Semiconductor Industry</div>
-        <div class="pub-meta">2026 IEEE Int. Conf. on Plasma Science (ICOPS), Jun. 2026 · Submission ID: 102</div>
-        <div class="pub-desc">Co-authors: A. S. Fahim, Md. A. Hossain, Md. R. Khan, M. H. Rocky</div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -711,10 +716,12 @@
     <h2 class="section-title">Technical <span>Skills</span></h2>
     <div class="section-line"></div>
     <div class="skills-grid reveal">
+      <!-- UPDATED: added GPAW, ASE, pymatgen -->
       <div class="skill-card">
         <div class="skill-card-header"><span class="skill-icon">💻</span><h4>Computational &amp; Simulation</h4></div>
         <div class="skill-pills">
-          <span class="pill">LAMMPS</span><span class="pill">PVsyst</span><span class="pill">Proteus</span>
+          <span class="pill">LAMMPS</span><span class="pill">GPAW</span><span class="pill">ASE</span>
+          <span class="pill">pymatgen</span><span class="pill">PVsyst</span><span class="pill">Proteus</span>
           <span class="pill">ModelSim</span><span class="pill">SOLIDWORKS</span><span class="pill">TIA Portal</span>
         </div>
       </div>
@@ -857,11 +864,20 @@
     <div class="section-line"></div>
     <div class="timeline reveal">
 
+      <!-- UPDATED: Ex-Chair -->
       <div class="timeline-item">
-        <div class="timeline-date">Sep 2025 – Present</div>
-        <div class="timeline-title">Chair, IEEE Signal Processing Society JUST SBC</div>
+        <div class="timeline-date">Sep 2025 – Jun 2026</div>
+        <div class="timeline-title">Ex-Chair, IEEE Signal Processing Society JUST SBC</div>
         <div class="timeline-org">IEEE SPS JUST Student Branch Chapter, Jashore</div>
-        <div class="timeline-desc">Elected Chapter Chair; leading technical events, workshops, and mentorship in signal processing. Organising the SigMa Mentorship Programme 2026 for undergraduate researchers.</div>
+        <div class="timeline-desc">Elected Chapter Chair; led technical events, workshops, and mentorship in signal processing. Organised the SigMa Mentorship Programme 2026 for undergraduate researchers.</div>
+      </div>
+
+      <!-- NEW: Distinguished Judge -->
+      <div class="timeline-item">
+        <div class="timeline-date">2026</div>
+        <div class="timeline-title">Distinguished Judge — SignalQuest 2026</div>
+        <div class="timeline-org">IEEE SPS JUST SBC · IEEE SPS Day</div>
+        <div class="timeline-desc">Served as Distinguished Judge at SignalQuest 2026, an IEEE Signal Processing Society Day competition organised by the JUST Student Branch Chapter, evaluating signal processing research projects from undergraduate participants.</div>
       </div>
 
       <div class="timeline-item">
@@ -1021,9 +1037,10 @@
   </div>
 </section>
 
+<!-- UPDATED: footer year 2026 -->
 <footer>
-  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> · Jessore, Bangladesh · 2025</p>
-  <p style="margin-top:0.4rem">EEE Researcher · IEEE SPS Chapter Chair · <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
+  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> · Jessore, Bangladesh · 2026</p>
+  <p style="margin-top:0.4rem">EEE Researcher · Ex-IEEE SPS Chapter Chair · <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
 </footer>
 
 <script>
