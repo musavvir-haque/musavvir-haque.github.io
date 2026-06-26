@@ -6,6 +6,8 @@
 ═══════════════════════════════════════════════ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d18">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Musavvir Haque">
 <meta name="description" content="Musavvir Haque — EEE graduate, computational materials scientist, and ML engineer at JUST, Bangladesh. Researcher in fusion plasma–material interactions, MD/DFT simulation, and signal processing. PhD applicant.">
@@ -18,6 +20,9 @@
 <meta property="og:title" content="Musavvir Haque | EEE Researcher & IEEE Leader">
 <meta property="og:description" content="Computational materials scientist and ML engineer specialising in fusion plasma–material interactions, MD/DFT simulation, and signal processing.">
 <meta property="og:image" content="https://musavvir-haque.github.io/photo.jpg">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="Musavvir Haque — EEE Researcher and IEEE Leader">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Musavvir Haque Portfolio">
 
@@ -26,19 +31,21 @@
 <meta name="twitter:title" content="Musavvir Haque | EEE Researcher & IEEE Leader">
 <meta name="twitter:description" content="Fusion materials, ML, and signal processing researcher. B.Sc. EEE, JUST. PhD applicant.">
 <meta name="twitter:image" content="https://musavvir-haque.github.io/photo.jpg">
+<meta name="twitter:image:alt" content="Musavvir Haque — EEE Researcher and IEEE Leader">
 
 <!-- Favicon placeholder -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236366f1'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='18' fill='white'>M</text></svg>">
 
 <title>Musavvir Haque | EEE Researcher & IEEE Leader</title>
 
-<!-- Fonts -->
+<!-- Preload LCP image (hero photo) -->
+<link rel="preload" as="image" href="https://musavvir-haque.github.io/photo.jpg" fetchpriority="high">
+
+<!-- Fonts: preconnect + non-blocking load (avoids render-blocking request) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Sitemap / Robots references -->
-<!-- <link rel="sitemap" href="/sitemap.xml"> -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
 <!-- ═══════════════════════════════════════════════
      STRUCTURED DATA (JSON-LD)
@@ -120,6 +127,7 @@
   --ink-3:     #151e30;
   --ink-4:     #1c2640;
   --plasma:    #6366f1;
+  --plasma-btn: #5457e0; /* darker fill used behind white text — meets 4.5:1 contrast */
   --plasma-hi: #818cf8;
   --plasma-lo: rgba(99,102,241,0.12);
   --ion:       #22d3ee;
@@ -127,7 +135,7 @@
   --text:      #e2e8f0;
   --text-2:    #cbd5e1;
   --muted:     #8899b4;
-  --muted-2:   #64748b;
+  --muted-2:   #7d8aa8; /* lightened from #64748b — original failed 4.5:1 AA contrast on --ink */
   --border:    rgba(99,102,241,0.18);
   --border-2:  rgba(255,255,255,0.06);
   --card-bg:   rgba(15,21,37,0.7);
@@ -152,6 +160,34 @@ body {
   line-height: 1.72;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ── SCREEN-READER-ONLY UTILITY (was referenced but never defined — fixed) ── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── SKIP LINK (keyboard accessibility) ── */
+.skip-link {
+  position: absolute;
+  left: -9999px; top: 0;
+  z-index: 1100;
+  background: var(--plasma-btn);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0 0 8px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
 }
 
 /* ── SCROLLBAR ── */
@@ -230,17 +266,18 @@ body {
 .nav-links a.active { color: #fff; background: var(--plasma-lo); }
 .nav-links .nav-cta {
   color: #fff !important;
-  background: var(--plasma);
+  background: var(--plasma-btn);
   padding: 0.35rem 0.9rem;
   border-radius: 6px;
   font-weight: 600;
 }
 .nav-links .nav-cta:hover { background: var(--plasma-hi); }
 
-/* hamburger */
+/* hamburger — 44x44 minimum touch target */
 .hamburger {
-  display: none; flex-direction: column; gap: 4.5px;
-  cursor: pointer; background: none; border: none; padding: 6px;
+  display: none; flex-direction: column; align-items: center; justify-content: center; gap: 4.5px;
+  cursor: pointer; background: none; border: none;
+  width: 44px; height: 44px; padding: 0;
   border-radius: 6px;
 }
 .hamburger span {
@@ -267,7 +304,7 @@ body {
 .mobile-nav a {
   color: var(--text); text-decoration: none;
   font-size: 0.95rem; font-weight: 500;
-  padding: 0.6rem 0.8rem; border-radius: 6px;
+  padding: 0.75rem 0.8rem; border-radius: 6px;
   transition: background var(--transition), color var(--transition);
 }
 .mobile-nav a:hover { background: var(--plasma-lo); color: var(--plasma-hi); }
@@ -368,7 +405,7 @@ body {
   border: none;
 }
 .btn-primary {
-  background: var(--plasma); color: #fff;
+  background: var(--plasma-btn); color: #fff;
   box-shadow: 0 0 28px rgba(99,102,241,0.35);
 }
 .btn-primary:hover {
@@ -707,8 +744,8 @@ body {
   transition: all var(--transition);
 }
 .contact-btn:hover { border-color: rgba(99,102,241,0.35); color: var(--plasma-hi); transform: translateY(-2px); }
-.contact-btn.primary { background: var(--plasma); border-color: var(--plasma); color: #fff; box-shadow: 0 0 28px rgba(99,102,241,0.3); }
-.contact-btn.primary:hover { background: var(--plasma-hi); }
+.contact-btn.primary { background: var(--plasma-btn); border-color: var(--plasma-btn); color: #fff; box-shadow: 0 0 28px rgba(99,102,241,0.3); }
+.contact-btn.primary:hover { background: var(--plasma-hi); border-color: var(--plasma-hi); }
 .contact-btn svg { flex-shrink: 0; }
 
 .refs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.9rem; text-align: left; }
@@ -739,14 +776,14 @@ footer p + p { margin-top: 0.35rem; }
 /* ── BACK TO TOP ── */
 #back-top {
   position: fixed; bottom: 2rem; right: 2rem;
-  width: 40px; height: 40px; border-radius: 50%;
-  background: var(--plasma);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--plasma-btn);
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-size: 1rem;
   box-shadow: 0 4px 20px rgba(99,102,241,0.4);
   opacity: 0; pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
   z-index: 800;
 }
 #back-top.visible { opacity: 1; pointer-events: all; }
@@ -791,6 +828,9 @@ a:focus-visible, button:focus-visible {
 </head>
 <body>
 
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- SCROLL PROGRESS -->
 <div id="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
 
@@ -808,7 +848,7 @@ a:focus-visible, button:focus-visible {
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
-  <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMenu(this)">
+  <button id="hamburgerBtn" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
     <span aria-hidden="true"></span>
     <span aria-hidden="true"></span>
     <span aria-hidden="true"></span>
@@ -816,13 +856,13 @@ a:focus-visible, button:focus-visible {
 </nav>
 
 <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
-  <a href="#about"      onclick="closeMobile()">About</a>
-  <a href="#research"   onclick="closeMobile()">Research</a>
-  <a href="#skills"     onclick="closeMobile()">Skills</a>
-  <a href="#projects"   onclick="closeMobile()">Projects</a>
-  <a href="#awards"     onclick="closeMobile()">Awards</a>
-  <a href="#experience" onclick="closeMobile()">Experience</a>
-  <a href="#contact"    onclick="closeMobile()">Contact</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#research" class="mobile-link">Research</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#awards" class="mobile-link">Awards</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#contact" class="mobile-link">Contact</a>
 </nav>
 
 <!-- ═══════════════════════════════════
@@ -908,10 +948,13 @@ a:focus-visible, button:focus-visible {
         <div class="photo-glow" aria-hidden="true"></div>
         <div class="photo-frame">
           <img
+            id="hero-photo"
             src="https://musavvir-haque.github.io/photo.jpg"
             alt="Musavvir Haque — EEE Researcher and IEEE Leader"
-            loading="lazy"
-            onerror="this.style.display='none'">
+            width="500"
+            height="600"
+            fetchpriority="high"
+            decoding="async">
           <div class="corner corner-tl" aria-hidden="true"></div>
           <div class="corner corner-br" aria-hidden="true"></div>
         </div>
@@ -919,6 +962,8 @@ a:focus-visible, button:focus-visible {
     </div>
   </div>
 </header>
+
+<main id="main-content">
 
 <!-- ═══════════════════════════════════
      ABOUT
@@ -1147,7 +1192,7 @@ a:focus-visible, button:focus-visible {
       </article>
 
       <article class="project-card reveal">
-        <p class="project-date">May 2025 – Present</p>
+        <p class="project-date">May 2025 </p>
         <h3>Energy Audit for Saleha Metal Industries Limited</h3>
         <p>Comprehensive audit of 5.1M kWh annual consumption; 400 kVA transformer analysis, synchronisation of 430 kVA &amp; 670 kVA transformers, and renewable integration recommendations.</p>
       </article>
@@ -1426,16 +1471,18 @@ a:focus-visible, button:focus-visible {
   </div>
 </section>
 
+</main>
+
 <!-- ═══════════════════════════════════
      FOOTER
 ═══════════════════════════════════ -->
 <footer role="contentinfo">
-  <p>Designed &amp; built by <a href="#">Musavvir Haque</a> &middot; Jessore, Bangladesh &middot; 2026</p>
+  <p>Designed &amp; built by <a href="#hero">Musavvir Haque</a> &middot; Jessore, Bangladesh &middot; 2026</p>
   <p>EEE Researcher &middot; Ex-IEEE SPS Chapter Chair &middot; <a href="mailto:musavvirhaquepial@gmail.com">musavvirhaquepial@gmail.com</a></p>
 </footer>
 
 <!-- BACK TO TOP -->
-<button id="back-top" aria-label="Back to top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<button id="back-top" aria-label="Back to top" title="Back to top">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
@@ -1444,15 +1491,30 @@ a:focus-visible, button:focus-visible {
 ═══════════════════════════════════ -->
 <script>
 /* ── MOBILE NAV ── */
-function toggleMenu(btn) {
-  const nav = document.getElementById('mobileNav');
-  const open = nav.classList.toggle('open');
-  btn.setAttribute('aria-expanded', open);
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileNav     = document.getElementById('mobileNav');
+
+function toggleMenu() {
+  const open = mobileNav.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', open);
 }
 function closeMobile() {
-  document.getElementById('mobileNav').classList.remove('open');
-  document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+  mobileNav.classList.remove('open');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
 }
+hamburgerBtn.addEventListener('click', toggleMenu);
+document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMobile));
+
+/* ── IMAGE FALLBACK (moved off inline onerror) ── */
+const heroPhoto = document.getElementById('hero-photo');
+if (heroPhoto) {
+  heroPhoto.addEventListener('error', () => { heroPhoto.style.display = 'none'; });
+}
+
+/* ── BACK TO TOP CLICK (moved off inline onclick) ── */
+document.getElementById('back-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 /* ── SCROLL HANDLERS ── */
 const progressBar = document.getElementById('progress-bar');
